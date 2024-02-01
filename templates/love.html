@@ -71,14 +71,11 @@
 
             function happy(element,ans)
             {
-                var des = "Answer : " + name.length + "<br><br>Reason : " + name + " has " + name.length + " letters";
-
                 var para = document.getElementById("happyExp");
 
                 if(ans == name.length)
                 {
                     showanswer(para);
-                    para.innerHTML = des;
                 }
                 else 
                 {
@@ -90,26 +87,21 @@
             function dna(element,ans)
             {
                 var para = document.getElementById("dna");
-                var des = "Answer : C++<br><br>Reason : You have a pointer in my heart but Other languages doesn't support pointers."
 
                 if(ans=="C++")
                 {
                     showanswer(para);
-                    para.innerHTML = des;
                 }
                 else 
                 {
                     element.disabled = true;
-                    hide(ans);
                 }
             }
             
             function tales(element,ans)
             {
                 var para = document.getElementById("tales");
-                var des = "Answer : Yes<br><br>Reason : You."
                 showanswer(para);
-                para.innerHTML = des;
             }
 
             function abcd(element)
@@ -123,7 +115,6 @@
                 if(ans=="u")
                 {
                     showanswer(para);
-                    para.innerHTML = "Me Too."
                 }
                 else 
                 {
@@ -135,12 +126,77 @@
             function abcd(element,ans)
             {
                 var para = document.getElementById("abcd");
-                var des = "Answer : Something else.<br><br>Reason : " + name + " is in my Heart.";
 
                 if(ans == "else")
                 {
                     showanswer(para);
                     para.innerHTML = des;
+                }
+                else 
+                {
+                    element.disabled = true;
+                    hide(ans);
+                }
+            }
+
+            function camera(element,ans)
+            {
+                var para = document.getElementById("camera");
+                showanswer(para);
+                console.log("Clicked");
+            }
+
+            function letters(element,ans)
+            {
+                var para = document.getElementById("letters");
+
+                if(ans == 2)
+                {
+                    showanswer(para);
+                }
+                else 
+                {
+                    element.disabled = true;
+                    hide(ans);
+                }
+            }
+
+            function highway(element,ans)
+            {
+                var par = document.getElementById("highway");
+                showanswer(par);
+            }
+
+            function father(element,ans)
+            {
+                var par = document.getElementById("father");
+
+                if(ans=="Practice")
+                {
+                    showanswer(par);
+                }
+                else 
+                {
+                    element.disabled = true;
+                    hide(ans);
+                }
+            }
+
+            function coffee(element,ans)
+            {
+                showanswer(document.getElementById("coffee"));
+            }
+
+            function drugs(element,ans)
+            {
+                showanswer(document.getElementById("drugs"));
+            }
+
+            function wonders(element,ans)
+            {
+                if(ans==9)
+                {
+                    showanswer(document.getElementById("wonders"));
                 }
                 else 
                 {
@@ -181,35 +237,35 @@
 
             </div>
 
-            <p class="description" style="display:none" id="happyExp"></p>
+            <p class="description" style="display:none" id="happyExp">Answer : 8<br><br>Reason : "kannamma" has 8 letters.</p>
 
             <div class="question">2. In which language, Your DNA is Coded?</div>
         
                 <div style="display: flex;flex-direction: column;margin-top: 20px;">
     
-                    <div class="answer"  id="Java" style="display: flex;align-items: center;">
-                        <input type="radio" name="ans" onclick="dna(this,'Java')"> 
-                        <img width="20%" style="margin-left: 20dp;" src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg">
+                    <div class="answer"  id="Java" style="display: flex; align-content: center;">
+                        <input type="radio" name="ans"  style="margin-right: 10px;" onclick="dna(this,'Java')"> 
+                        <img width="20%" src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg">
                     </div>
     
-                    <div class="answer" id="Python">
-                        <input type="radio" name="ans" onclick="dna(this,'Python')"> 
-                        <img width="20%" style="margin-left: 20dp;" src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg">
+                    <div class="answer" id="Python" style="display: flex; align-content: center;margin-top: 20px;">
+                        <input type="radio" name="ans" style="margin-right: 10px;" onclick="dna(this,'Python')"> 
+                        <img width="40%" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg">
                     </div>
     
-                    <div class="answer" id="C++">
-                        <input type="radio" name="ans" onclick="dna(this,'C++')">
-                        <img width="20%" style="margin-left: 20dp;" src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg">
+                    <div class="answer" id="C++" style="display: flex; align-content: center;margin-top: 20px;">
+                        <input type="radio" name="ans" style="margin-right: 10px;" onclick="dna(this,'C++')">
+                        <img width="16%" src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg">
                     </div>
     
-                    <div class="answer" id="Java Script">
-                        <input type="radio" name="ans" onclick="dna(this,'Java Script')">
-                        <label>Java Script</label>
+                    <div class="answer" id="Java Script" style="display: flex; align-content: center;margin-top: 20px;">
+                        <input type="radio" style="margin-right: 10px;" name="ans" onclick="dna(this,'Java Script')">
+                        <img width="14%" src="https://logosdownload.com/logo/javascript-logo-512.png">
                     </div>
     
                 </div>
 
-                <p class="description" style="display:none" id="dna"></p>
+                <p class="description" style="display:none" id="dna">Answer : C++<br><br>Reason : You have a pointer in my heart but Other languages doesn't support pointers.</p>
 
                 <div class="question">3. Are Fairy Tales True?</div>
         
@@ -231,8 +287,7 @@
                         </div>
                     </div>
 
-                    <p class="description" style="display:none" id="tales"></p>
-
+                <p class="description" style="display:none" id="tales">Answer : Yes<br><br>Reason : You.</p>
 
 <pre class="question" style="display: flex;justify-self: flex-start;">
 4."A" love "B",
@@ -266,7 +321,7 @@
 
                     </div>
 
-                    <p class="description" style="display:none" id="love"></p>
+                    <p class="description" style="display:none" id="love">Me Too.</p>
                     
 
                     <div class="question">5. ABCDEFGHIJKLMNOPQRSTUVWXYZ<br><br>&nbsp; &nbsp; Why some letters are missing?</div>
@@ -294,51 +349,160 @@
                         </div>
                     </div>
 
-                    <p class="description" style="display:none" id="abcd"></p>
+                    <p class="description" style="display:none" id="abcd">Answer : Something else.<br><br>Reason : kannamma is in my Heart.</p>
 
                     <div class="question">6. Are You a Camera?</div>
         
                     <div style="display: flex;flex-direction: column;margin-top: 20px;">
         
                         <div class="answer">
-                            <input type="radio" name="ans"> 
+                            <input type="radio" name="ans" onclick="camera(this,'yes')"> 
                             <label>Yes</label>
                         </div>
         
                         <div class="answer">
-                            <input type="radio" name="ans"> 
+                            <input type="radio" name="ans" onclick="camera(this,'no')"> 
                             <label>No</label>
                         </div>
 
                     </div>
 
+                    <p class="description" style="display:none" id="camera">Answer : Yes<br><br>Reason : I smile whenever I see you.</p>
+
                     <div class="question">7. The no. of letters in "Love"?</div>
         
                     <div style="display: flex;flex-direction: column;margin-top: 20px;">
         
-                        <div class="answer">
-                            <input type="radio" name="ans"> 
+                        <div class="answer" id="4">
+                            <input type="radio" name="ans" onclick="letters(this,4)"> 
                             <label>4</label>
                         </div>
         
-                        <div class="answer">
-                            <input type="radio" name="ans"> 
+                        <div class="answer" id="2">
+                            <input type="radio" name="ans" onclick="letters(this,2)"> 
                             <label>2</label>
                         </div>
 
-                        <div class="answer">
-                            <input type="radio" name="ans"> 
+                        <div class="answer" id="7">
+                            <input type="radio" name="ans" onclick="letters(this,7)"> 
                             <label>7</label>
                         </div>
 
-                        <div class="answer">
-                            <input type="radio" name="ans"> 
+                        <div class="answer" id="1"> 
+                            <input type="radio" name="ans" onclick="letters(this,1)"> 
                             <label>1</label>
                         </div>
 
                     </div>
 
-                    <button class="button">Submit</button>
+                    <p class="description" style="display:none" id="letters">Answer : 2<br><br>Reason : The letters are You and Me.</p>
+
+                    <div class="question">8. Have you born in Highway?</div>
+        
+                    <div style="display: flex;flex-direction: column;margin-top: 20px;">
+        
+                        <div class="answer" id="yes">
+                            <input type="radio" name="ans" onclick="highway(this,'yes')"> 
+                            <label>Yes</label>
+                        </div>
+        
+                        <div class="answer" id="no">
+                            <input type="radio" name="ans" onclick="highway(this,'no')"> 
+                            <label>No</label>
+                        </div>
+                    </div>
+
+                <p class="description" style="display:none" id="highway">Answer : Yes<br><br>Reason : That's where most of the accidents happen.</p>
+
+                <div class="question">9. What's your Father's name?</div>
+        
+                    <div style="display: flex;flex-direction: column;margin-top: 20px;">
+        
+                        <div class="answer" id="Practice">
+                            <input type="radio" name="ans" onclick="father(this,'Practice')"> 
+                            <label>Practice</label>
+                        </div>
+        
+                        <div class="answer" id="God">
+                            <input type="radio" name="ans" onclick="father(this,'God')"> 
+                            <label>God</label>
+                        </div>
+
+                        <div class="answer" id="Brahma">
+                            <input type="radio" name="ans" onclick="father(this,'Brahma')"> 
+                            <label>Brahma</label>
+                        </div>
+
+                        <div class="answer" id="None">
+                            <input type="radio" name="ans" onclick="father(this,'None')"> 
+                            <label>None</label>
+                        </div>
+                    </div>
+
+                <p class="description" style="display:none" id="father">Answer : Practice<br><br>Reason : Practice makes Perfect.</p>
+
+                <div class="question">10. Are you a Coffee?</div>
+        
+                    <div style="display: flex;flex-direction: column;margin-top: 20px;">
+        
+                        <div class="answer" id="yes">
+                            <input type="radio" name="ans" onclick="coffee(this,'yes')"> 
+                            <label>Yes</label>
+                        </div>
+        
+                        <div class="answer" id="no">
+                            <input type="radio" name="ans" onclick="coffee(this,'no')"> 
+                            <label>No</label>
+                        </div>
+                    </div>
+
+                <p class="description" style="display:none" id="coffee">Answer : Yes<br><br>Reason : I think of you first thing in the morning.</p>
+
+                <div class="question">11. Are your parents dealing with drugs?</div>
+        
+                    <div style="display: flex;flex-direction: column;margin-top: 20px;">
+        
+                        <div class="answer" id="yes">
+                            <input type="radio" name="ans" onclick="drugs(this,'yes')"> 
+                            <label>Yes</label>
+                        </div>
+        
+                        <div class="answer" id="no">
+                            <input type="radio" name="ans" onclick="drugs(this,'no')"> 
+                            <label>No</label>
+                        </div>
+                    </div>
+
+                <p class="description" style="display:none" id="drugs">Answer : Yes<br><br>Reason : I am addicted to You.</p>
+
+                <div class="question">12. How many wonders are in the world?</div>
+        
+                    <div style="display: flex;flex-direction: column;margin-top: 20px;">
+        
+                        <div class="answer" id="12">
+                            <input type="radio" name="ans" onclick="wonders(this,12)"> 
+                            <label>11 or 12</label>
+                        </div>
+        
+                        <div class="answer" id="9">
+                            <input type="radio" name="ans" onclick="wonders(this,9)"> 
+                            <label>9 or 10</label>
+                        </div>
+
+                        <div class="answer" id="6">
+                            <input type="radio" name="ans" onclick="wonders(this,6)"> 
+                            <label>6</label>
+                        </div>
+
+                        <div class="answer" id="10">
+                            <input type="radio" name="ans" onclick="wonders(this,10)"> 
+                            <label>10</label>
+                        </div>
+                    </div>
+
+                <p class="description" style="display:none" id="wonders">Answer : 9 or 10<br><br>Reason : You and our girl children are other wonders.</p>
+
+                <button class="button" type="submit">Submit</button>
 
                 </div>
     </body>
