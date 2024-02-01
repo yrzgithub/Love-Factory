@@ -1,0 +1,346 @@
+<html>
+
+    <head>
+        <title>Love</title>
+    </head>
+
+    <style>
+        .question 
+        {
+            font-size: 20px;
+            margin-top: 30px;
+            margin-left: 25px;
+        }
+        label
+        {
+            font-size: 20px;
+        }
+        .answer 
+        {
+            margin-bottom: 10px;
+            margin-right: auto;
+            margin-left: 45px;
+        }
+        .questionArea 
+        {
+            display: flex;
+            flex-direction: column;
+            background-color:lightyellow;
+            margin: auto;
+            width: 60%;
+        }
+        .button 
+        {
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            width: 50%;
+            margin-bottom: 30px;
+            background-color: blue;
+            color: white;
+            margin-top: 30px;
+            border-color: white;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .description 
+        {
+            font-size: 18px;
+            margin-top: 30px;
+            margin-left: 35px;
+        }
+    </style>
+
+    <body background='https://i.gifer.com/3jni.gif'>
+
+        <script>
+
+            const name = "kannamma";
+
+            function showanswer(para)
+            {
+                para.setAttribute("style","display:block;")
+            }
+
+            function hide(id)
+            {
+                document.getElementById(id).setAttribute("style","color:darkgrey");
+            }
+
+            function happy(element,ans)
+            {
+                var des = "Answer : " + name.length + "<br><br>Reason : " + name + " has " + name.length + " letters";
+
+                var para = document.getElementById("happyExp");
+
+                if(ans == name.length)
+                {
+                    showanswer(para);
+                    para.innerHTML = des;
+                }
+                else 
+                {
+                    element.disabled = true;
+                    hide(ans);
+                }
+            }
+
+            function dna(element,ans)
+            {
+                var para = document.getElementById("dna");
+                var des = "Answer : C++<br><br>Reason : You have a pointer in my heart but Other languages doesn't support pointers."
+
+                if(ans=="C++")
+                {
+                    showanswer(para);
+                    para.innerHTML = des;
+                }
+                else 
+                {
+                    element.disabled = true;
+                    hide(ans);
+                }
+            }
+            
+            function tales(element,ans)
+            {
+                var para = document.getElementById("tales");
+                var des = "Answer : Yes<br><br>Reason : You."
+                showanswer(para);
+                para.innerHTML = des;
+            }
+
+            function abcd(element)
+            {
+                var ans = element.value;
+            }
+
+            function love(element,ans)
+            {
+                var para = document.getElementById("love");
+                if(ans=="u")
+                {
+                    showanswer(para);
+                    para.innerHTML = "Me Too."
+                }
+                else 
+                {
+                    element.disabled = true;
+                    hide(ans);
+                }
+            }
+
+            function abcd(element,ans)
+            {
+                var para = document.getElementById("abcd");
+                var des = "Answer : Something else.<br><br>Reason : " + name + " is in my Heart.";
+
+                if(ans == "else")
+                {
+                    showanswer(para);
+                    para.innerHTML = des;
+                }
+                else 
+                {
+                    element.disabled = true;
+                    hide(ans);
+                }
+            }
+               
+        </script>
+
+        <div class="questionArea">
+
+            <h2 style="display: flex;justify-content: center;">Answer these questions</h2>
+
+            <div class="question">1. The no. of letters in "Happiness"?</div>
+        
+            <div id="happy" style="margin-top: 20px;">
+
+                <div class="answer" id="2">
+                    <input type="radio" onclick="happy(this,2)" name="ans"> 
+                    <label>2</label>
+                </div>
+
+                <div class="answer" id="8">
+                    <input type="radio" onclick="happy(this,8)" name="ans"> 
+                    <label>8</label>
+                </div>
+
+                <div class="answer" id="9">
+                    <input type="radio" onclick="happy(this,9)" name="ans">
+                    <label>9</label>
+                </div>
+
+                <div class="answer" id="10">
+                    <input type="radio" onclick="happy(this,10)" name="ans">
+                    <label>10</label>
+                </div>
+
+            </div>
+
+            <p class="description" style="display:none" id="happyExp"></p>
+
+            <div class="question">2. In which language, Your DNA is Coded?</div>
+        
+                <div style="display: flex;flex-direction: column;margin-top: 20px;">
+    
+                    <div class="answer"  id="Java" style="display: flex;align-items: center;">
+                        <input type="radio" name="ans" onclick="dna(this,'Java')"> 
+                        <img width="20%" style="margin-left: 20dp;" src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg">
+                    </div>
+    
+                    <div class="answer" id="Python">
+                        <input type="radio" name="ans" onclick="dna(this,'Python')"> 
+                        <img width="20%" style="margin-left: 20dp;" src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg">
+                    </div>
+    
+                    <div class="answer" id="C++">
+                        <input type="radio" name="ans" onclick="dna(this,'C++')">
+                        <img width="20%" style="margin-left: 20dp;" src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg">
+                    </div>
+    
+                    <div class="answer" id="Java Script">
+                        <input type="radio" name="ans" onclick="dna(this,'Java Script')">
+                        <label>Java Script</label>
+                    </div>
+    
+                </div>
+
+                <p class="description" style="display:none" id="dna"></p>
+
+                <div class="question">3. Are Fairy Tales True?</div>
+        
+                    <div style="display: flex;flex-direction: column;margin-top: 20px;">
+        
+                        <div class="answer" id="yes">
+                            <input type="radio" name="ans" onclick="tales(this,'yes')"> 
+                            <label>Yes</label>
+                        </div>
+        
+                        <div class="answer" id="no">
+                            <input type="radio" name="ans" onclick="tales(this,'no')"> 
+                            <label>No</label>
+                        </div>
+        
+                        <div class="answer" id="no idea">
+                            <input type="radio" name="ans" onclick="tales(this,'no idea')">
+                            <label>No Idea</label>
+                        </div>
+                    </div>
+
+                    <p class="description" style="display:none" id="tales"></p>
+
+
+<pre class="question" style="display: flex;justify-self: flex-start;">
+4."A" love "B",
+  "B" love "C",
+  "C" love "D",
+  "D" love "E",
+  
+  "I" love ?
+</pre>        
+                    <div id="happy" style="margin-top: 20px;">
+
+                        <div class="answer" id="j">
+                            <input type="radio" onclick="love(this,'j')" name="ans"> 
+                            <label>J</label>
+                        </div>
+
+                        <div class="answer" id="g">
+                            <input type="radio" onclick="love(this,'g')" name="ans"> 
+                            <label>G</label>
+                        </div>
+
+                        <div class="answer" id="a">
+                            <input type="radio" onclick="love(this,'a')" name="ans">
+                            <label>A</label>
+                        </div>
+
+                        <div class="answer" id="u">
+                            <input type="radio" onclick="love(this,'u')" name="ans">
+                            <label>U</label>
+                        </div>
+
+                    </div>
+
+                    <p class="description" style="display:none" id="love"></p>
+                    
+
+                    <div class="question">5. ABCDEFGHIJKLMNOPQRSTUVWXYZ<br><br>&nbsp; &nbsp; Why some letters are missing?</div>
+        
+                    <div style="display: flex;flex-direction: column;margin-top: 20px;">
+        
+                        <div class="answer" id="dev">
+                            <input type="radio" name="ans" onclick="abcd(this,'dev')"> 
+                            <label>Developer missed them.</label>
+                        </div>
+        
+                        <div class="answer" id="rules">
+                            <input type="radio" name="ans" onclick="abcd(this,'rules')"> 
+                            <label>English rules are changed.</label>
+                        </div>
+
+                        <div class="answer" id="meet">
+                            <input type="radio" name="ans" onclick="abcd(this,'meet')"> 
+                            <label>They went to meet their love.</label>
+                        </div>
+        
+                        <div class="answer" id="else">
+                            <input type="radio" name="ans" onclick="abcd(this,'else')">
+                            <label>Something else</label>
+                        </div>
+                    </div>
+
+                    <p class="description" style="display:none" id="abcd"></p>
+
+                    <div class="question">6. Are You a Camera?</div>
+        
+                    <div style="display: flex;flex-direction: column;margin-top: 20px;">
+        
+                        <div class="answer">
+                            <input type="radio" name="ans"> 
+                            <label>Yes</label>
+                        </div>
+        
+                        <div class="answer">
+                            <input type="radio" name="ans"> 
+                            <label>No</label>
+                        </div>
+
+                    </div>
+
+                    <div class="question">7. The no. of letters in "Love"?</div>
+        
+                    <div style="display: flex;flex-direction: column;margin-top: 20px;">
+        
+                        <div class="answer">
+                            <input type="radio" name="ans"> 
+                            <label>4</label>
+                        </div>
+        
+                        <div class="answer">
+                            <input type="radio" name="ans"> 
+                            <label>2</label>
+                        </div>
+
+                        <div class="answer">
+                            <input type="radio" name="ans"> 
+                            <label>7</label>
+                        </div>
+
+                        <div class="answer">
+                            <input type="radio" name="ans"> 
+                            <label>1</label>
+                        </div>
+
+                    </div>
+
+                    <button class="button">Submit</button>
+
+                </div>
+    </body>
+
+</html>
