@@ -4,7 +4,7 @@ web = Flask(__name__)
 
 
 
-@web.route("/")
+@web.route("/iloveu")
 def home():
     return render_template("gender.html")
 
