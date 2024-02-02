@@ -18,7 +18,7 @@ def you():
     frm = args["from"]
     to = args["to"]
     song = args["song"]
-    return render_template("you.html",frm=frm,to=to)
+    return render_template("you.html",frm=frm,to=to,tlen=len(to))
 
 
 @web.route("/iloveu")

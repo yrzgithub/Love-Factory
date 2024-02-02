@@ -58,6 +58,7 @@
         <script>
 
             const name = "{{frm}}";
+            const to = "{{to}}"
 
             console.log(name);
 
@@ -81,7 +82,9 @@
             {
                 var para = document.getElementById("happyExp");
 
-                if(ans == name.length)
+                console.log(ans,name.length);
+
+                if(ans == to.length)
                 {
                     showanswer(para);
                 }
@@ -138,7 +141,6 @@
                 if(ans == "else")
                 {
                     showanswer(para);
-                    para.innerHTML = des;
                 }
                 else 
                 {
@@ -223,35 +225,16 @@
         
             <div id="happy" style="margin-top: 20px;">
 
-                <div class="answer" id="2">
-                    <input type="radio" onclick="happy(this,2)" name="ans"> 
-                    <label>2</label>
+                {%for i in [tlen+2,tlen,tlen+5,tlen+3]%}
+
+                <div class="answer" id={{i}}>
+                    <input type="radio" onclick="happy(this,'{{i}}')" name="ans"> 
+                    <label>{{i}}</label>
                 </div>
 
-                <div class="answer" id="8">
-                    <input type="radio" onclick="happy(this,8)" name="ans"> 
-                    <label>10</label>
-                </div>
-
-                <div class="answer" id="9">
-                    <input type="radio" onclick="happy(this,9)" name="ans">
-                    <label>9</label>
-                </div>
-
-                <div class="answer" id="10">
-                    <input type="radio" onclick="happy(this,10)" name="ans">
-                    <label>10</label>
-                </div>
+                {%endfor%}
 
             </div>
-
-            <script>
-
-                var happy = document.getElementById("happy");
-
-                happy.innerHTML = "{%i for i in [name.length+2,name.length,name.length+5,name.length+1] } <div class='answer' id='{%i%}''><input type='radio' onclick='happy(this,{%i%})' name='ans'><label>{%i%}</label></div>";
-
-            </script>
 
             <p class="description" style="display:none" id="happyExp">Answer : 8<br><br>Reason : "kannamma" has 8 letters.</p>
 
@@ -337,7 +320,7 @@
 
                     </div>
 
-                    <p class="description" style="display:none" id="love">Me Too.</p>
+                    <p class="description" style="display:none" id="love">Love You Too.</p>
                     
 
                     <div class="question">5. ABCDEFGHIJKLMNOPQRSTUVWXYZ<br><br>&nbsp; &nbsp; Why some letters are missing?</div>
