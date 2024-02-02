@@ -32,4 +32,4 @@ def love():
 
 
 
-web.run(host="",debug=True)
+web.run(debug=True)

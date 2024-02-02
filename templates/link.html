@@ -20,16 +20,19 @@
                 {
                     return;
                 }
-                else 
+
+            /*    if(!window.isSecureContext)
                 {
+                    alert("not secure");
+                    return;
+                } */
 
-                    var link = window.location.origin +"/you?from=" + name + "&to=" + their +"&song=" + song.replace(" ","%");
-                    navigator.clipboard.writeText(link);
+                var link = window.location.origin +"/you?from=" + name + "&to=" + their +"&song=" + song.replace(" ","%");
+                navigator.clipboard.writeText(link);
 
-                    alert("Link Copied to clipboard");
+                alert("Link Copied to clipboard");
                 
-                    console.log(link);
-                }
+                console.log(link);
             }
 
             function select(element,gen)
