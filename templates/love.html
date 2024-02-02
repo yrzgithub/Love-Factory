@@ -7,12 +7,27 @@
     <body>
 
         <script>
-            var audio = new Audio("https://rr3---sn-gwpa-jwce.googlevideo.com/videoplayback?expire=1706879441&ei=cZW8Zca-G8eUz7sPn_msiAI&ip=2409%3A4072%3A385%3A6e5c%3A7cab%3Aa589%3A9d9a%3Aefd9&id=o-AJUTXOeVmPr576XC9B5x9_CWcbuMccwoBJTYe6ugatAA&itag=251&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=td&mm=31%2C26&mn=sn-gwpa-jwce%2Csn-qxaelnek&ms=au%2Conr&mv=m&mvi=3&pcm2cms=yes&pl=41&initcwndbps=751250&spc=UWF9fxyFKZlpxQnwIbPfwA3pETWetnMixX9gmLZ53TMhziQ&vprv=1&svpuc=1&mime=audio%2Fwebm&ns=S1dPGbSU4cO1rYzUFmTuoeYQ&gir=yes&clen=4000045&dur=241.821&lmt=1705875393101467&mt=1706857488&fvip=1&keepalive=yes&fexp=24007246&c=WEB&txp=4532434&n=hclCLBuhW_Aw-Qtg2&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Cgir%2Cclen%2Cdur%2Clmt&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpcm2cms%2Cpl%2Cinitcwndbps&lsig=AAO5W4owRQIhAI7xq5N0EXLGwMCjLZAmCunAWHy-0nzqn79mn5Rv_pEUAiAXr5aHmfhqzyvcwE2ygxDCikf80UjtiGRkVFhyMLW4HQ%3D%3D&sig=AJfQdSswRgIhAJuy_uA_G9x0JeO0sZZMpWDP21uYAEhDmhTo4cOC8SvjAiEAmN-UDDGYoEH7i6S9Ut_JWnA---unI43EjJlSBdGAYjQ=");
+                var url = "{{url}}".replaceAll("amp;","");
+                console.log(url);
+                
+                "{% if url!=None %}"
+
+                var audio = new Audio(url);
+
+                console.log(url);
 
                 window.onclick = (e) => 
                 {
                     audio.play();
                 };
+
+                "{% endif %}"
+
+                window.onload = (e) => 
+                {
+                    alert("Click anywhere");
+                };
+
         </script>
 
         <style>

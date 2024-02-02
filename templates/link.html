@@ -26,7 +26,7 @@
                     var link = window.location.origin +"/you?from=" + name + "&to=" + their +"&song=" + song.replace(" ","%");
                     navigator.clipboard.writeText(link);
 
-                    alert("Link Copied");
+                    alert("Link Copied to clipboard");
                 
                     console.log(link);
                 }
@@ -53,6 +53,11 @@
 
         <style>
 
+            * 
+            {
+                font-size: 25px;
+            }
+
             body 
             {
                 display: flex;
@@ -65,13 +70,8 @@
 
             table 
             {
-                width: 80%;
+                width: 70%;
                 margin: auto;
-            }
-
-            * 
-            {
-                font-size: 25px;
             }
 
             td
@@ -109,6 +109,7 @@
         </style>
 
         <div>
+
             <h1 style="font-size: 60px;text-align: center;">
                 Link Generator
             </h1>
@@ -164,9 +165,11 @@
                     </tr>
                 </table>
 
-                <div style="display:flex; margin: auto; margin-top: 5%; width: 80%;">
+                <div style="display:flex; margin: auto; width: 80%;margin-top: 5%;">
+                
                     <button type="reset">Reset</button>
                     <button type="button" onclick="redirect()">Generate</button>
+               
                 </div>
 
             </form>

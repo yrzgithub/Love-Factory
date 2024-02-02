@@ -43,6 +43,7 @@
             margin-top: 30px;
             border-color: white;
             border-radius: 10px;
+            font-size: 20px;
             cursor: pointer;
         }
         .description 
@@ -61,12 +62,6 @@
             const to = "{{to}}"
 
             console.log(name);
-
-            function setHappiness()
-            {
-               document.getElementById('3').innerHTML = 0; 
-               console.log("Heppy");
-            }
 
             function showanswer(para)
             {
@@ -241,7 +236,7 @@
 
             </div>
 
-            <p class="description" style="display:none" id="happyExp">Answer : 8<br><br>Reason : "kannamma" has 8 letters.</p>
+            <p class="description" style="display:none" id="happyExp">Answer : {{tlen}}<br><br>Reason : "{{to}}" has {{tlen}} letters.</p>
 
             <div class="question">2. In which language, Your DNA is Coded?</div>
         
@@ -328,8 +323,34 @@
                     <p class="description" style="display:none" id="love">Love You Too.</p>
                     
 
-                    <div class="question">5. ABCDEFGHIJKLMNOPQRSTUVWXYZ<br><br>&nbsp; &nbsp; Why some letters are missing?</div>
+                    <div id="lettersq" class="question"></div>
         
+                    <script>
+                        var uname = to.toUpperCase();
+
+                        var alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                        var missing = "";
+            
+                        for(var c of uname)
+                        {
+                            if(alphabets.includes(c))
+                            {
+                                alphabets = alphabets.replace(c,"");
+                                missing += c;
+                            }
+                            
+                            missing = missing.split("").sort().join("");
+
+                            console.log(alphabets,missing);
+                        }
+
+                        var question = "5. " + alphabets + "<br><br>&nbsp;&nbsp;&nbsp; Where is " + missing + "?";
+                        console.log("question",question);
+
+                        document.getElementById("lettersq").innerHTML = question;
+
+                    </script>
+
                     <div style="display: flex;flex-direction: column;margin-top: 20px;">
         
                         <div class="answer" id="dev">
@@ -349,11 +370,11 @@
         
                         <div class="answer" id="else">
                             <input type="radio" name="ans" onclick="abcd(this,'else')">
-                            <label>Something else</label>
+                            <label>Somewhere Else</label>
                         </div>
                     </div>
 
-                    <p class="description" style="display:none" id="abcd">Answer : Something else.<br><br>Reason : kannamma is in my Heart.</p>
+                    <p class="description" style="display:none" id="abcd">Answer : Somewhere Else.<br><br>Reason : {{to}} is in my Heart.</p>
 
                     <div class="question">6. Are You a Camera?</div>
         
