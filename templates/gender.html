@@ -5,21 +5,176 @@
 
     <body>
 
-        <h1 style="display: flex;justify-content: center;font-size: 100px;">Are You...?</h1>
-
-        <div style="display: flex;justify-content: space-evenly;">
+        <script>
         
-            <a href="love">
+            function redirect()
+            {
+                var form = document.getElementById("form");
+                var name = document.getElementById("name").value.trim();
+                var their = document.getElementById("their").value.trim();
+                var boy = document.getElementById("boy").value;
+                var girl = document.getElementById("girl").value;
+                var song = document.getElementById("song").value; 
 
-                <img width="50%" src="https://img.freepik.com/free-vector/cute-girl-cartoon-character-white-background_1308-115873.jpg?w=740&t=st=1706715197~exp=1706715797~hmac=b86742a18a7bfff5da24182ba6b761db99b7cf2ee48c4bd6e8e14bc70cbde4ff">
+                if(name=="" || their=="")
+                {
+                    return;
+                }
+                else 
+                {
+
+                    var link = window.location.origin +"/templates/love.html?from=" + name + "&to=" + their +"&song=" + song.replace(" ","%");
+                    navigator.clipboard.writeText(link);
+
+                    alert("Link Copied");
+                    window.close();
+
             
-            </a>
-                
-            <a  href="https://google.com">
+                    console.log(link);
+                }
+            }
 
-                <img width="100%" src="https://i.pinimg.com/564x/a5/c1/12/a5c112e2c5b87756a588fbd14b2a4ad9.jpg">
-            </a>
-       
+            function select(element,gen)
+            {
+                var boy = document.getElementById("boy");
+                var girl = document.getElementById("girl");
+
+                if(gen=="boy")
+                {
+                    girl.setAttribute("style","background-color:white;");
+                    boy.setAttribute("style","background-color:lightblue;");
+                }
+                else 
+                {
+                    girl.setAttribute("style","background-color:lightpink;");
+                    boy.setAttribute("style","background-color:white;");
+                }
+            }
+
+        </script>
+
+        <style>
+
+            body 
+            {
+                display: flex;
+                margin: auto;
+                align-items: center;
+                justify-items: center;
+                align-content: center;
+                justify-content: center;
+            }
+
+            table 
+            {
+                width: 80%;
+                margin: auto;
+            }
+
+            * 
+            {
+                font-size: 25px;
+            }
+
+            td
+            {
+                border: 1px solid black;
+            }
+
+            th 
+            {
+                width: fit-content;
+                background-color:antiquewhite;
+                width: 30%;
+                height: auto;
+            }
+
+            input 
+            {
+                padding: 4%;
+                width: 100%;
+                border: none;
+            }
+
+            button 
+            {
+                width: 40%;
+                margin: auto;
+                cursor: pointer;
+                border: 3px solid blue;
+                color: white;
+                background-color: blue;
+                border-radius: 12px;
+                text-align: center;
+            }
+            
+        </style>
+
+        <div>
+            <h1 style="font-size: 60px;text-align: center;">
+                Link Generator
+            </h1>
+    
+            <form id="form">
+                <table> 
+                    <tr>
+                        <th>
+                            <label>Your Name</label>
+                        </th>
+        
+                        <td colspan="2">
+                            <input spellcheck="false" id="name" placeholder="Your Name"/>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <th>
+                            <label>Their Name</label>
+                        </th>
+        
+                        <td colspan="2">
+                            <input spellcheck="false" id="their" placeholder="Their Name"/>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <th>
+                            <label>Are You</label>
+                        </th>
+        
+                        <td onclick="select(this,'girl')" id="girl">
+            
+                            <img style="width: 30%;height: auto;display: flex;margin: auto;" src="https://img.freepik.com/free-vector/cute-girl-cartoon-character-white-background_1308-115873.jpg?w=740&t=st=1706715197~exp=1706715797~hmac=b86742a18a7bfff5da24182ba6b761db99b7cf2ee48c4bd6e8e14bc70cbde4ff">
+                            
+                        </td>
+        
+                        <td onclick = "select(this,'boy')" id="boy">
+    
+                            <img style="width:30%;height: auto;display: flex; margin: auto;" src="https://img.freepik.com/free-vector/cute-girl-cartoon-character-white-background_1308-115873.jpg?w=740&t=st=1706715197~exp=1706715797~hmac=b86742a18a7bfff5da24182ba6b761db99b7cf2ee48c4bd6e8e14bc70cbde4ff">
+        
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <th>
+                            <label>Song title</label>
+                        </th>
+        
+                        <td colspan="2">
+                            <input spellcheck="false" id="song" placeholder="Their favourite song"/>
+                        </td>
+                    </tr>
+                </table>
+
+                <div style="display:flex; margin: auto; margin-top: 5%; width: 80%;">
+                    <button type="reset">Reset</button>
+                    <button type="button" onclick="redirect()">Generate</button>
+                </div>
+
+            </form>
+
         </div>
+
     </body>
+
 </html>
