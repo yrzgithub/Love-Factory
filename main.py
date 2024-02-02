@@ -32,4 +32,4 @@ def love():
 
 
 
-web.run(debug=True)
+web.run(host="192.168.225.137",port=8080,debug=True)
