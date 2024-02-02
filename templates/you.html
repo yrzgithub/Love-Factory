@@ -57,7 +57,15 @@
 
         <script>
 
-            const name = "kannamma";
+            const name = "{{frm}}";
+
+            console.log(name);
+
+            function setHappiness()
+            {
+               document.getElementById('3').innerHTML = 0; 
+               console.log("Heppy");
+            }
 
             function showanswer(para)
             {
@@ -222,7 +230,7 @@
 
                 <div class="answer" id="8">
                     <input type="radio" onclick="happy(this,8)" name="ans"> 
-                    <label>8</label>
+                    <label>10</label>
                 </div>
 
                 <div class="answer" id="9">
@@ -236,6 +244,14 @@
                 </div>
 
             </div>
+
+            <script>
+
+                var happy = document.getElementById("happy");
+
+                happy.innerHTML = "{%i for i in [name.length+2,name.length,name.length+5,name.length+1] } <div class='answer' id='{%i%}''><input type='radio' onclick='happy(this,{%i%})' name='ans'><label>{%i%}</label></div>";
+
+            </script>
 
             <p class="description" style="display:none" id="happyExp">Answer : 8<br><br>Reason : "kannamma" has 8 letters.</p>
 

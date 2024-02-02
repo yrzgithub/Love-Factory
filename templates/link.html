@@ -23,13 +23,11 @@
                 else 
                 {
 
-                    var link = window.location.origin +"/templates/love.html?from=" + name + "&to=" + their +"&song=" + song.replace(" ","%");
+                    var link = window.location.origin +"/you?from=" + name + "&to=" + their +"&song=" + song.replace(" ","%");
                     navigator.clipboard.writeText(link);
 
                     alert("Link Copied");
-                    window.close();
-
-            
+                
                     console.log(link);
                 }
             }

@@ -1,17 +1,30 @@
 from flask import *
 
+
+
+
 web = Flask(__name__)
 
 
 
-@web.route("/iloveu")
+@web.route("/link")
 def home():
-    return render_template("gender.html")
+    return render_template("link.html")
 
 
-@web.route("/love")
-def girl():
+@web.route("/you")
+def you():
+    args = request.args
+    frm = args["from"]
+    to = args["to"]
+    song = args["song"]
+    return render_template("you.html",frm=frm,to=to)
+
+
+@web.route("/iloveu")
+def love():
     return render_template("love.html")
+
 
 
 web.run(debug=True)
