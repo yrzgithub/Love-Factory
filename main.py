@@ -16,9 +16,11 @@ def home():
 def you():
     global song
     args = request.args
-    frm = args["from"]
-    to = args["to"]
-    song = args["song"]
+    frm = args["from"].strip()
+    to = args["to"].strip()
+    song = args["song"].strip()
+    if frm == "" or to == "" or song =="" :
+        return "<error>code=1<br>Invalid Data</error>"
     return render_template("you.html",frm=frm,to=to,tlen=len(to))
 
 
@@ -31,5 +33,4 @@ def love():
     return render_template("love.html",url=url)
 
 
-
-web.run(port=5000,debug=True)
+web.run(host="192.168.225.137",port=5000,debug=True)
