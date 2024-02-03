@@ -1,7 +1,13 @@
 #areu {
     display: flex;
-    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
 } 
+
+#imgs {
+    margin: auto;
+}
 
 h1 
 {
@@ -11,19 +17,17 @@ h1
 form 
 {
     margin: auto;
-    border: 2px solid lightgrey;
-    padding: 5%;
 }
 
 img {
     margin: auto;
 }
 
-input {
+input, form, #areu {
     border: 2px solid lightgrey;
 }
 
-input, button {
+input, button, #areu {
     border-radius: 12px;
 }
 
@@ -48,18 +52,24 @@ button {
         font-size: 1rem;
     }
 
-    img {
-        
+    body 
+    {
+        margin-top: 3%;
     }
 
+    img {
+        height: 10rem;
+        margin: auto;
+    }
 
     h1 {
         font-size: 3rem;
     }
 
-
     form {
         width: 60%;
+        height: 60%;
+        padding: 5%;
         background-color: aqua;
     }
 
@@ -68,7 +78,7 @@ button {
         width: 30%;
     }
 
-    input, #areu {
+    input {
         padding: 2%;
         width: 100%;
     }
