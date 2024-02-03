@@ -1,4 +1,4 @@
-function redirect()
+function redirect(e)
 {
     var form = document.getElementById("form");
     var name = document.getElementById("name").value.trim();

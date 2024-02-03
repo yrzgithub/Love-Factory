@@ -3,21 +3,24 @@
 
         <title>Love Generator</title>
         <meta content="width=device-width,initial-scale=1" name="viewport"/>
-        <link rel="stylesheet" href="static/styles.css">
+        <link rel="stylesheet" href="static\styles.css">
 
     </head>
 
     <body>
 
+        <script src="static\love.js"></script>
+
         <!-- <h1>Generate Love</h1> -->
 
-        <form>
-            <input placeholder="Your Name">
+        <form id="form">
+
+            <input id="name" placeholder="Your Name">
 
             <br>
             <br>
 
-            <input placeholder="Their Name">
+            <input id="their" placeholder="Their Name">
 
             <br>
             <br>
@@ -31,15 +34,15 @@
 
             <br>
 
-            <input placeholder="Their Favourite Song">
+            <input id="song" placeholder="Their Favourite Song">
 
             <br>
             <br>
             <br>
 
             <div id="buttons">
-                <button>Reset</button>
-                <button>Generate</button>
+                <button type="reset">Reset</button>
+                <button type="button" onclick="redirect()">Generate</button>
             </div>
 
         </form>
