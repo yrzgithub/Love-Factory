@@ -59,7 +59,7 @@ button {
 @media screen and (min-width : 1024px) {
 
     * {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     #girl 
@@ -86,7 +86,7 @@ button {
     }
 
     input {
-        padding: 2%;
+        padding: 3%;
         width: 100%;
     }   
 }
