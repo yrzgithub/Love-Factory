@@ -7,7 +7,7 @@ web = Flask(__name__)
 song = None
 
 
-@web.route("/link")
+@web.route("/generate")
 def home():
     return render_template("link.html")
 
@@ -36,4 +36,4 @@ def love():
     return render_template("love.html",url=url)
 
 
-web.run(host="192.168.225.137",port=5000,debug=True)
+web.run(host="192.168.225.137",debug=True)

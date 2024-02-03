@@ -28,17 +28,14 @@ function redirect(e)
 
 function select(element,gen)
 {
-    var boy = document.getElementById("boy");
-    var girl = document.getElementById("girl");
+    var areu = document.getElementById("areu");
 
     if(gen=="boy")
     {
-        girl.setAttribute("style","background-color:white;");
         boy.setAttribute("style","background-color:lightblue;");
     }
     else 
     {
         girl.setAttribute("style","background-color:lightpink;");
-        boy.setAttribute("style","background-color:white;");
     }
 }
