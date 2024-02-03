@@ -1,9 +1,14 @@
 #areu {
     display: flex;
-    justify-items: center;
-    justify-content: center;
     align-items: center;
 } 
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
 
 #imgs {
     margin: auto;
@@ -14,20 +19,15 @@ h1
     text-align: center;
 }
 
-form 
-{
-    margin: auto;
-}
-
 img {
     margin: auto;
 }
 
-input, form, #areu {
+input, #areu, form {
     border: 2px solid lightgrey;
 }
 
-input, button, #areu {
+input, button, #areu,form {
     border-radius: 12px;
 }
 
@@ -49,17 +49,30 @@ button {
 @media screen and (min-width : 1024px) {
 
     * {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
-    body 
-    {
-        margin-top: 3%;
+    body {
+        background-image: url("https://i.pinimg.com/originals/55/40/42/5540423ca8555fa5ac9963bf6acc6426.gif");
+        background-size:100%;
+    }
+
+    label {
+        margin-left: 3%;
     }
 
     img {
-        height: 10rem;
+        padding: 2%;
         margin: auto;
+    }
+
+    #girl 
+    {
+        height: 6rem;
+    }
+
+    #boy {
+        height: 7rem;
     }
 
     h1 {
@@ -67,10 +80,9 @@ button {
     }
 
     form {
-        width: 60%;
-        height: 60%;
-        padding: 5%;
-        background-color: aqua;
+        width: 30%;
+        padding: 3%;
+        background-color: white;
     }
 
     button {
@@ -81,6 +93,32 @@ button {
     input {
         padding: 2%;
         width: 100%;
+    }   
+}
+
+@media screen and (min-width:320px) {
+
+    form {
+        padding: 10%;
+        margin: 5%;
+    }
+
+    input {
+        padding: 5%;
+        width: 100%;
+    }
+
+    #girl {
+        padding: 2%;
+        width: 30%;
+    }
+
+    #boy {
+        width: 35%;
+    }
+
+    label {
+       margin-left: 5%;
     }
     
 }
