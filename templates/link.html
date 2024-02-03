@@ -69,7 +69,6 @@
 
             table 
             {
-                width: 70%;
                 margin: auto;
             }
 
@@ -93,7 +92,6 @@
 
             button 
             {
-                width: 40%;
                 margin: auto;
                 cursor: pointer;
                 border: 3px solid blue;
@@ -106,9 +104,22 @@
 
             @media screen and (min-width:320px) {
 
-                html 
-                {
-                    background-image:url( "https://media.tenor.com/tO85mO366xYAAAAj/amore-love-you.gif)";
+                .pc {
+                    display: none;
+                }
+
+                body {
+                    background-color: aqua;
+                    display: flex;
+                    align-items: center;
+                }
+
+                * {
+                    font-size: .95rem;
+                }
+
+                input {
+                    height: 100%;
                 }
 
                 body, table 
@@ -123,7 +134,7 @@
 
                 h1 
                 {
-                    font-size: 1.5rem;
+                    font-size: 2.5rem;
                     text-align: center;
                 }
 
@@ -132,12 +143,27 @@
                     width: 90%;
                     height: 50%;
                 }
+
+                #btns {
+                    padding-top: 10%;
+                    width: 90%;
+                }
+
+
+                button {
+                    padding: .5rem;
+                    width: 45%;
+                }
             }
 
             @media screen and (min-width : 1024px) {
 
+                .mobile {
+                    display: none;
+                }
+
                 * {
-                    font-size: 1.25em;
+                    font-size: 1.3em;
                 }
 
                 h1 
@@ -153,6 +179,7 @@
                 body 
                 {
                     background-color: pink;
+                    overflow: hidden;
                 }
 
                 table 
@@ -169,19 +196,21 @@
 
                 #btns 
                 {
-                    width: 80%;
+                    width: 75%;
                     padding: 3%;
                 }
 
                 button 
                 {
-                    padding: .5rem;
+                    padding: .4rem;
+                    font-size: 1.25rem;
+                    width: 40%;
                 }
             }
             
         </style>
 
-        <div>
+        <div class="pc">
 
             <h1>
                 Link Generator
@@ -246,6 +275,16 @@
                 </div>
 
             </form>
+
+        </div>
+
+        <div class="mobile">
+
+            <h1>
+                Link Generator
+            </h1>
+
+            
 
         </div>
 
