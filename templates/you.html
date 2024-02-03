@@ -4,21 +4,21 @@
 
         <title>ILoveU</title>
         <meta content="width=device-width,initial-scale=1" name="viewport"/>
-        <link rel="stylesheet" href="lovestyles.css"/>
+        <link rel="stylesheet" href="lovestyles.css">
 
     </head>
 
-    <body background='https://i.gifer.com/3jni.gif'>
+    <body>
 
-        <script src="static\answers.js"></script>
+        <script src="answers.js"></script>
 
         <div class="questionArea">
 
-            <h2 style="display: flex;justify-content: center;font-size: 2.2rem;margin-top: ;">Answer these questions</h2>
+            <h1>Answer these questions</h1>
 
-            <div class="question">1. The no. of letters in "Happiness"?</div>
+            <div class="first">1. The no. of letters in "Happiness"?</div>
         
-            <div id="happy" style="margin-top: 20px;">
+            <div id="happy" class="answergroup">
 
                 {%for i in [tlen+2,tlen,tlen+5,tlen+3]%}
 
@@ -31,12 +31,11 @@
 
             </div>
 
-            <p class="description" style="display:none" id="happyExp">Answer : {{tlen}}<br><br>Reason : "{{to}}" has {{tlen}} letters.</p>
+            <p class="description" style="display:none" id="happyExp"><b>Answer</b> : {{tlen}}<br><br><b>Reason</b> : "{{to}}" has {{tlen}} letters.</p>
 
             <div class="question">2. In which language, Your DNA is Coded?</div>
         
-                <div style="display: flex;flex-direction: column;margin-top: 20px;">
-    
+                <div class="answergroup">
                     <div class="answer"  id="Java" style="display: flex; align-content: center;">
                         <input type="radio" name="ans"  style="margin-right: 10px;" onclick="dna(this,'Java')"> 
                         <img width="20%" src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg">
@@ -59,11 +58,11 @@
     
                 </div>
 
-                <p class="description" style="display:none" id="dna">Answer : C++<br><br>Reason : You have a pointer in my heart but Other languages doesn't support pointers.</p>
+                <p class="description" style="display:none" id="dna"><b>Answer</b> : C++<br><br><b>Reason</b> : You have a pointer in my heart but Other languages doesn't support pointers.</p>
 
                 <div class="question">3. Are Fairy Tales True?</div>
         
-                    <div style="display: flex;flex-direction: column;margin-top: 20px;">
+                    <div  class="answergroup">
         
                         <div class="answer" id="yes">
                             <input type="radio" name="ans" onclick="tales(this,'yes')"> 
@@ -81,7 +80,7 @@
                         </div>
                     </div>
 
-                <p class="description" style="display:none" id="tales">Answer : Yes<br><br>Reason : You.</p>
+                <p class="description" style="display:none" id="tales"><b>Answer</b> : Yes<br><br><b>Reason</b> : You.</p>
 
 <pre class="question" style="display: flex;justify-self: flex-start;">
 4."A" love "B",
@@ -91,7 +90,7 @@
   
   "I" love ?
 </pre>        
-                    <div id="happy" style="margin-top: 20px;">
+                    <div id="happy" class="answergroup" style="margin-top: 20px;">
 
                         <div class="answer" id="j">
                             <input type="radio" onclick="love(this,'j')" name="ans"> 
@@ -146,7 +145,7 @@
 
                     </script>
 
-                    <div style="display: flex;flex-direction: column;margin-top: 20px;">
+                    <div class="answergroup">
         
                         <div class="answer" id="dev">
                             <input type="radio" name="ans" onclick="abcd(this,'dev')"> 
@@ -169,11 +168,11 @@
                         </div>
                     </div>
 
-                    <p class="description" style="display:none" id="abcd">Answer : Somewhere Else.<br><br>Reason : {{to}} is in my Heart.</p>
+                    <p class="description" style="display:none" id="abcd"><b>Answer</b> : Somewhere Else.<br><br><b>Reason</b> : {{to}} is in my Heart.</p>
 
                     <div class="question">6. Are You a Camera?</div>
         
-                    <div style="display: flex;flex-direction: column;margin-top: 20px;">
+                    <div class="answergroup">
         
                         <div class="answer">
                             <input type="radio" name="ans" onclick="camera(this,'yes')"> 
@@ -187,11 +186,11 @@
 
                     </div>
 
-                    <p class="description" style="display:none" id="camera">Answer : Yes<br><br>Reason : I smile whenever I see you.</p>
+                    <p class="description" style="display:none" id="camera"><b>Answer</b> : Yes<br><br><b>Reason</b> : I smile whenever I see you.</p>
 
                     <div class="question">7. The no. of letters in "Love"?</div>
         
-                    <div style="display: flex;flex-direction: column;margin-top: 20px;">
+                    <div class="answergroup">
         
                         <div class="answer" id="4">
                             <input type="radio" name="ans" onclick="letters(this,4)"> 
@@ -215,11 +214,11 @@
 
                     </div>
 
-                    <p class="description" style="display:none" id="letters">Answer : 2<br><br>Reason : The letters are You and Me.</p>
+                    <p class="description" style="display:none" id="letters"><b>Answer</b> : 2<br><br><b>Reason</b> : The letters are You and Me.</p>
 
                     <div class="question">8. Have you born in Highway?</div>
         
-                    <div style="display: flex;flex-direction: column;margin-top: 20px;">
+                    <div class="answergroup">
         
                         <div class="answer" id="yes">
                             <input type="radio" name="ans" onclick="highway(this,'yes')"> 
@@ -232,11 +231,11 @@
                         </div>
                     </div>
 
-                <p class="description" style="display:none" id="highway">Answer : Yes<br><br>Reason : That's where most of the accidents happen.</p>
+                <p class="description" style="display:none" id="highway"><b>Answer</b> : Yes<br><br><b>Reason</b> : That's where most of the accidents happen.</p>
 
                 <div class="question">9. What's your Father's name?</div>
         
-                    <div style="display: flex;flex-direction: column;margin-top: 20px;">
+                    <div class="answergroup">
         
                         <div class="answer" id="Practice">
                             <input type="radio" name="ans" onclick="father(this,'Practice')"> 
@@ -259,11 +258,11 @@
                         </div>
                     </div>
 
-                <p class="description" style="display:none" id="father">Answer : Practice<br><br>Reason : Practice makes Perfect.</p>
+                <p class="description" style="display:none" id="father"><b>Answer</b> : Practice<br><br><b>Reason</b> : Practice makes Perfect.</p>
 
                 <div class="question">10. Are you a Coffee?</div>
         
-                    <div style="display: flex;flex-direction: column;margin-top: 20px;">
+                    <div class="answergroup">
         
                         <div class="answer" id="yes">
                             <input type="radio" name="ans" onclick="coffee(this,'yes')"> 
@@ -276,11 +275,11 @@
                         </div>
                     </div>
 
-                <p class="description" style="display:none" id="coffee">Answer : Yes<br><br>Reason : I think of you first thing in the morning.</p>
+                <p class="description" style="display:none" id="coffee"><b>Answer</b> : Yes<br><br><b>Reason</b> : I think of you first thing in the morning.</p>
 
                 <div class="question">11. Are your parents dealing with drugs?</div>
         
-                    <div style="display: flex;flex-direction: column;margin-top: 20px;">
+                    <div class="answergroup">
         
                         <div class="answer" id="yes">
                             <input type="radio" name="ans" onclick="drugs(this,'yes')"> 
@@ -293,11 +292,11 @@
                         </div>
                     </div>
 
-                <p class="description" style="display:none" id="drugs">Answer : Yes<br><br>Reason : I am addicted to You.</p>
+                <p class="description" style="display:none" id="drugs"><b>Answer</b> : Yes<br><br><b>Reason</b> : I am addicted to You.</p>
 
                 <div class="question">12. How many wonders are in the world?</div>
         
-                    <div style="display: flex;flex-direction: column;margin-top: 20px;">
+                    <div class="answergroup">
         
                         <div class="answer" id="12">
                             <input type="radio" name="ans" onclick="wonders(this,12)"> 
@@ -320,7 +319,7 @@
                         </div>
                     </div>
 
-                <p class="description" style="display:none" id="wonders">Answer : 9 or 10<br><br>Reason : You and our girl children are other wonders.</p>
+                <p class="description" style="display:none" id="wonders"><b>Answer</b> : 9 or 10<br><br><b>Reason</b> : You and our girl children are other wonders.</p>
 
                 <button onclick="iloveu(this)" class="button" type="submit">Submit</button>
 

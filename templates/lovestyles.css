@@ -1,8 +1,6 @@
 .answer 
 {
-    margin-bottom: 10px;
     margin-right: auto;
-    margin-left: 45px;
 }
 
 .questionArea 
@@ -11,7 +9,6 @@
     flex-direction: column;
     background-color:lightyellow;
     margin: auto;
-    width: 60%;
 }
 
 button 
@@ -19,35 +16,129 @@ button
     display: flex;
     justify-content: center;
     margin: auto;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    width: 50%;
-    margin-bottom: 30px;
     background-color: blue;
     color: white;
-    margin-top: 30px;
     border: 3px solid blue;
     border-radius: 12px;
-    font-size: 20px;
     cursor: pointer;
+    font-weight: bold;
 }
 
-.description 
+h1 
 {
-    font-size: 18px;
-    margin-top: 30px;
-    margin-left: 35px;
+    text-align: center;
+}
+
+.answergroup {
+    display: flex;
+    flex-direction: column;
 }
 
 @media screen and (min-width : 1024px)
 {
+    button {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        width: 50%;
+        font-size: 20px;
+    }
+
+    .answergroup {
+        margin-left: 8%;
+        margin-top: 1%;
+    }
+
+    .answer {
+        margin-top: 2%;
+    }
+
     .question {
         font-size: 1.5rem;
-        margin-top: 3%;
+        margin-top: 5%;
         margin-left: 5%;
+    }
+
+    .first {
+        font-size: 1.5rem;
+        margin-left: 5%;
+        margin-top: 2%;
+    }
+
+    .description {
+    
+        margin-top: 3%;
+        font-size: 1.3em;
+        margin-left: 8%;
+
+    }
+
+    body {
+        background:url('https://i.gifer.com/3jni.gif');
+    }
+
+    h1 {
+        display: flex;
+        justify-content: center;
+        font-size: 2.5rem;
+        margin-top: 5%;
+    }
+
+    .questionArea {
+        width: 60%;
     }
 
     label {
         font-size: 1.3rem;
+    }
+}
+
+@media screen and (min-width:320px) and (max-width:767px) {
+
+    button {
+        width: 70%;
+        margin-bottom: 10%;
+        font-size: 1.2rem;
+        margin-top: 10%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+
+    .first {
+        font-size: 1.2rem;
+        margin-top: 1%;
+        margin-left: 5%;
+    }
+
+    .description {
+        margin-left: 10%;
+        font-size: 1.1rem;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+
+    .answergroup {
+        margin-left: 3%;
+    }
+
+    .questionArea {
+        width: 100%;
+    }
+
+    .question {
+        font-size: 1.2rem;
+        margin-top: 10%;
+        margin-left: 5%;
+    }
+
+    .answer {
+        margin-left: 8%;
+        margin-top: 5%;
+        font-size: 1.1rem;
     }
 }
