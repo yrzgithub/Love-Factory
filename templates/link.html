@@ -3,6 +3,8 @@
         <title>Propose</title>
     </head>
 
+    <meta content="width=device-width,initial-scale=1" name="viewport"/>
+
     <body>
 
         <script>
@@ -56,16 +58,10 @@
 
         <style>
 
-            * 
-            {
-                font-size: 25px;
-            }
-
             body 
             {
                 display: flex;
                 margin: auto;
-                align-items: center;
                 justify-items: center;
                 align-content: center;
                 justify-content: center;
@@ -86,13 +82,11 @@
             {
                 width: fit-content;
                 background-color:antiquewhite;
-                width: 30%;
                 height: auto;
             }
 
             input 
             {
-                padding: 4%;
                 width: 100%;
                 border: none;
             }
@@ -109,12 +103,87 @@
                 border-radius: 12px;
                 text-align: center;
             }
+
+            @media screen and (min-width:320px) {
+
+                html 
+                {
+                    background-image:url( "https://media.tenor.com/tO85mO366xYAAAAj/amore-love-you.gif)";
+                }
+
+                body, table 
+                {
+                    font-size: 10px;
+                }
+
+                th 
+                {
+                    width: 30%;
+                }
+
+                h1 
+                {
+                    font-size: 1.5rem;
+                    text-align: center;
+                }
+
+                table 
+                {
+                    width: 90%;
+                    height: 50%;
+                }
+            }
+
+            @media screen and (min-width : 1024px) {
+
+                * {
+                    font-size: 1.25em;
+                }
+
+                h1 
+                {
+                    font-size: 3rem
+                }
+
+                input 
+                {
+                    padding: 3%;
+                }
+
+                body 
+                {
+                    background-color: pink;
+                }
+
+                table 
+                {
+                    width: 80%;
+                    height: 40%;
+                }
+
+                th 
+                {
+                    width: 30%;
+                
+                }
+
+                #btns 
+                {
+                    width: 80%;
+                    padding: 3%;
+                }
+
+                button 
+                {
+                    padding: .5rem;
+                }
+            }
             
         </style>
 
         <div>
 
-            <h1 style="font-size: 60px;text-align: center;">
+            <h1>
                 Link Generator
             </h1>
     
@@ -169,7 +238,7 @@
                     </tr>
                 </table>
 
-                <div style="display:flex; margin: auto;width: 70%;margin-top: 5%;">
+                <div id="btns" style="display:flex; margin: auto;">
                 
                     <button type="reset">Reset</button>
                     <button type="button" onclick="redirect()">Generate</button>
