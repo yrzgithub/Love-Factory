@@ -1,0 +1,76 @@
+#areu {
+    display: flex;
+    align-content: center;
+} 
+
+h1 
+{
+    text-align: center;
+}
+
+form 
+{
+    margin: auto;
+    border: 2px solid lightgrey;
+    padding: 5%;
+}
+
+img {
+    margin: auto;
+}
+
+input {
+    border: 2px solid lightgrey;
+}
+
+input, button {
+    border-radius: 12px;
+}
+
+button {
+    border : 2px solid blue;
+    background-color: blue;
+    color: white;
+    margin: auto;
+}
+
+#buttons {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+@media screen and (min-width : 1024px) {
+
+    * {
+        font-size: 1rem;
+    }
+
+    img {
+        
+    }
+
+
+    h1 {
+        font-size: 3rem;
+    }
+
+
+    form {
+        width: 60%;
+        background-color: aqua;
+    }
+
+    button {
+        padding: .5%;
+        width: 30%;
+    }
+
+    input, #areu {
+        padding: 2%;
+        width: 100%;
+    }
+    
+}
