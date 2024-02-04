@@ -36,4 +36,4 @@ def love():
     return render_template("love.html",url=url)
 
 
-web.run(host="192.168.225.137",debug=True)
+web.run(debug=True)

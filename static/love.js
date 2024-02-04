@@ -18,7 +18,7 @@ function redirect(e)
         return;
     } */
 
-    var link = window.location.origin +"/you?from=" + name + "&to=" + their +"&song=" + song.replace(" ","%");
+    var link = window.location.origin +"/you?from=" + name + "&to=" + their +"&song=" + song.replaceAll(" ","%");
     navigator.clipboard.writeText(link);
 
     alert("Link Copied to clipboard");
