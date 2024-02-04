@@ -348,7 +348,7 @@
                                 missing += c;
                             }
                             
-                            missing = missing.split("").sort().join("");
+                            missing = missing.split("").sort().join("").toUpperCase();
 
                             console.log(alphabets,missing);
                         }
@@ -383,7 +383,7 @@
                         </div>
                     </div>
 
-                    <p class="description" style="display:none" id="abcd"><b>Answer</b> : Somewhere Else.<br><br><b>Reason</b> : "{{to}}" is in my Heart.</p>
+                    <p class="description" style="display:none" id="abcd"><b>Answer</b> : Somewhere Else.<br><br><b>Reason</b> : "{{to.upper()}}" is in my Heart.</p>
 
                     <div class="question">6. Are You a Camera?</div>
         
@@ -580,7 +580,7 @@
 
                     </div>
 
-                <p class="description" style="display:none" id="moon"><b>Answer</b> : It creates confusion.<br><br><b>Reason</b> : Moon iteself is dull in front of you.</p>
+                <p class="description" style="display:none" id="moon"><b>Answer</b> : It creates confusion.<br><br><b>Reason</b> : Moon itself is dull in front of you.</p>
 
                 <div class="question">14. What is your nickname?</div>
         
@@ -627,7 +627,7 @@
 
                 <p class="description" style="display:none" id="drugs"><b>Answer</b> : Yes<br><br><b>Reason</b> : I am addicted to You.</p>
 
-                <div class="question">16. How many wonders are in the world?</div>
+                <div class="question">16. How many wonders are there in the world?</div>
         
                     <div class="answergroup">
         
