@@ -7,28 +7,27 @@
     <body>
 
         <script>
-                var url = "{{url}}".replaceAll("amp;","");
-                console.log(url);
-                
-                "{% if url!=None %}"
+            var url = "{{url}}".replaceAll("amp;","");
+            console.log(url);
+            
+            "{% if url!=None %}"
 
-                var audio = new Audio(url);
-                audio.loop = true;
+            var audio = new Audio(url);
+            audio.loop = true;
 
-                console.log(url);
+            console.log(url);
 
-                window.onclick = (e) => 
-                {
-                    audio.play();
-                };
+            window.onclick = (e) => 
+            {
+                audio.play();
+            };
 
-                "{% endif %}"
+            "{% endif %}"
 
-                window.onload = (e) => 
-                {
-                    alert("Click anywhere");
-                }; 
-
+            window.onload = (e) => 
+            {
+                alert("Click anywhere");
+            }; 
         </script>
 
         <style>
