@@ -22,7 +22,7 @@ def you():
         song = args["song"].strip()
         
     except:
-        return "<error>code=100<br>Invalid Data</error>"
+        return "<html><error>code=100<br>Invalid Data</error></html>"
         
     return render_template("you.html",frm=frm,to=to,tlen=len(to))
 

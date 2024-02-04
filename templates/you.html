@@ -169,6 +169,60 @@
                 window.location.href = window.location.origin + "/iloveu";
             }
 
+            function physics(element,ans)
+            {
+                if(ans=="lens")
+                {
+                    showanswer(document.getElementById("physics"));
+                }
+                else 
+                {
+                    element.disabled = true;
+                    hide(ans);
+                }
+            }
+
+            function u(element,ans)
+            {
+                if(ans == "both")
+                {
+                    showanswer(document.getElementById("ur"));
+                }
+                else 
+                {
+                    element.disabled = true;
+                    hide(ans);
+                }
+            }
+
+            function moon(element,ans)
+            {
+                if(ans == "confusion")
+                {
+                    showanswer(document.getElementById("moon"));
+                }
+                else 
+                {
+                    element.disabled = true;
+                    hide(ans);
+                }
+            }
+
+            function nick(element,ans)
+            {
+                if(ans=="Kannamma")
+                {
+                    showanswer(document.getElementById("nick"));
+                }
+
+                else 
+                {
+                    element.disabled = true;
+                    hide(ans);
+                }
+            }
+
+
         </script>
 
         <div class="questionArea">
@@ -374,7 +428,69 @@
 
                     <p class="description" style="display:none" id="letters"><b>Answer</b> : 2<br><br><b>Reason</b> : The letters are You and Me.</p>
 
-                    <div class="question">8. Have you born in Highway?</div>
+                    <div class="question">8. What's your name in Physics?</div>
+        
+                    <div class="answergroup">
+        
+                        <div class="answer" id="momentum">
+                            <input type="radio" name="ans" onclick="physics(this,'momentum')"> 
+                            <label>Momentum</label>
+                        </div>
+        
+                        <div class="answer" id="gravity">
+                            <input type="radio" name="ans" onclick="physics(this,'gravity')"> 
+                            <label>Gravity</label>
+                        </div>
+
+                        <div class="answer" id="lens">
+                            <input type="radio" name="ans" onclick="physics(this,'lens')"> 
+                            <label>Lens</label>
+                        </div>
+
+                        <div class="answer" id="quantum"> 
+                            <input type="radio" name="ans" onclick="physics(this,'quantum')"> 
+                            <label>Quantum Particle</label>
+                        </div>
+
+                    </div>
+
+                    <p class="description" style="display:none" id="physics"><b>Answer</b> : Lens<br><br><b>Reason</b> : I always want to keep You in my Eyes.</p>
+
+                    <div class="question">9. What is You?</div>
+        
+                    <div class="answergroup">
+        
+                        <div class="answer" id="artist">
+                            <input type="radio" name="ans" onclick="u(this,'artist')"> 
+                            <label>Artist</label>
+                        </div>
+        
+                        <div class="answer" id="gardener">
+                            <input type="radio" name="ans" onclick="u(this,'gardener')"> 
+                            <label>Gardener</label>
+                        </div>
+
+                        <div class="answer" id="both">
+                            <input type="radio" name="ans" onclick="u(this,'both')"> 
+                            <label>Both</label>
+                        </div>
+
+                        <div class="answer" id="arent"> 
+                            <input type="radio" name="ans" onclick="u(this,'arent')"> 
+                            <label>Both aren't</label>
+                        </div>
+
+                    </div>
+
+                    <style>
+                        .tab {
+                            tab-size: 3;
+                        }
+                    </style>
+
+                    <p class="description" style="display:none" id="ur"><b>Gardener : </b>You plant fragrant flowers in my heart.<br><br><b>Artist : </b>You paint my life and make it colorful.</p>
+
+                    <div class="question">10. Have you born in Highway?</div>
         
                     <div class="answergroup">
         
@@ -391,7 +507,7 @@
 
                 <p class="description" style="display:none" id="highway"><b>Answer</b> : Yes<br><br><b>Reason</b> : That's where most of the accidents happen.</p>
 
-                <div class="question">9. What's your Father's name?</div>
+                <div class="question">11. What's your Father's name?</div>
         
                     <div class="answergroup">
         
@@ -418,7 +534,7 @@
 
                 <p class="description" style="display:none" id="father"><b>Answer</b> : Practice<br><br><b>Reason</b> : Practice makes Perfect.</p>
 
-                <div class="question">10. Are you a Coffee?</div>
+                <div class="question">12. Are you a Coffee?</div>
         
                     <div class="answergroup">
         
@@ -435,7 +551,63 @@
 
                 <p class="description" style="display:none" id="coffee"><b>Answer</b> : Yes<br><br><b>Reason</b> : I think of you first thing in the morning.</p>
 
-                <div class="question">11. Are your parents dealing with drugs?</div>
+                <div class="question">13. Why should'nt You go out in New Moon Day?</div>
+        
+                    <div class="answergroup">
+        
+                        <div class="answer" id="go">
+                            <input type="radio" name="ans" onclick="moon(this,'go')"> 
+                            <label>I can go</label>
+                        </div>
+        
+                        <div class="answer" id="holiday">
+                            <input type="radio" name="ans" onclick="moon(this,'holiday')"> 
+                            <label>It may be a holiday.</label>
+                        </div>
+
+                        <div class="answer" id="confusion">
+                            <input type="radio" name="ans" onclick="moon(this,'confusion')"> 
+                            <label>It creates confusion</label>
+                        </div>
+
+                        <div class="answer" id="notsure"> 
+                            <input type="radio" name="ans" onclick="moon(this,'notsure')"> 
+                            <label>Not Sure</label>
+                        </div>
+
+                    </div>
+
+                <p class="description" style="display:none" id="moon"><b>Answer</b> : It creates confusion.<br><br><b>Reason</b> : Moon iteself is dull in front of you.</p>
+
+                <div class="question">14. What is your nickname?</div>
+        
+                    <div class="answergroup">
+        
+                        <div class="answer" id="Kannamma">
+                            <input type="radio" name="ans" onclick="nick(this,'Kannamma')"> 
+                            <label>Kannamma</label>
+                        </div>
+        
+                        <div class="answer" id="luv">
+                            <input type="radio" name="ans" onclick="nick(this,'luv')"> 
+                            <label>Love</label>
+                        </div>
+
+                        <div class="answer" id="wifeee">
+                            <input type="radio" name="ans" onclick="nick(this,'wifeee')"> 
+                            <label>Wifeee</label>
+                        </div>
+
+                        <div class="answer" id="kulfi"> 
+                            <input type="radio" name="ans" onclick="nick(this,'kulfi')"> 
+                            <label>Kulfi</label>
+                        </div>
+
+                    </div>
+
+                <p class="description" style="display:none" id="nick"><b>Answer</b> : Kannamma<br><br><b>Reason</b> : You're as precious as my Eyes.</p>
+
+                <div class="question">15. Are your parents dealing with drugs?</div>
         
                     <div class="answergroup">
         
@@ -452,7 +624,7 @@
 
                 <p class="description" style="display:none" id="drugs"><b>Answer</b> : Yes<br><br><b>Reason</b> : I am addicted to You.</p>
 
-                <div class="question">12. How many wonders are in the world?</div>
+                <div class="question">16. How many wonders are in the world?</div>
         
                     <div class="answergroup">
         
