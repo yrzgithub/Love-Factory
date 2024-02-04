@@ -2,7 +2,8 @@
 
     <head>
 
-        <title>ILoveU</title>
+        <title>My Soul</title>
+        <link rel="icon" type="image/x-icon" href="\static\favicon.png">
         <meta content="width=device-width,initial-scale=1" name="viewport"/>
         <link rel="stylesheet" href="static\lovestyles.css">
 
@@ -74,6 +75,8 @@
                 var para = document.getElementById("love");
                 if(ans=="u")
                 {
+                    var audio = new Audio("static\\tera.mp3");
+                    audio.play()
                     showanswer(para);
                 }
                 else 
