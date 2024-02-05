@@ -1,6 +1,7 @@
 from flask import *
 from pafy import new
-from pywhatkit import playonyt
+# from pywhatkit import playonyt
+from youtubesearchpython import VideosSearch
 
 
 web = Flask(__name__)
@@ -31,7 +32,8 @@ def you():
 def love():
     url = None
     if song!=None:
-        url = new(playonyt(song.replace("%"," "),open_video=False).split("\\")[0]).getbestaudio().url
+        yt_url = VideosSearch(song.replace("%"," "))["result"][0]["link"]
+        url = new(yt_url).getbestaudio().url
 
     return render_template("love.html",url=url)
 
