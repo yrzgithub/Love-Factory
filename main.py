@@ -48,4 +48,4 @@ def love():
     return render_template("love.html",url=url)
 
 
-web.run()
+web.run(port=2000,debug=True)
