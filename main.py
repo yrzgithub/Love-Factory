@@ -41,6 +41,9 @@ def love():
         query = song.replace("%"," ")
         yt_url = VideosSearch(query).result()["result"][0]["link"]
         url = new(yt_url).getbestaudio().url
+    
+    else:
+        return "<html>Error Code : 420<br>Change the query and try again.</html>"
 
     return render_template("love.html",url=url)
 

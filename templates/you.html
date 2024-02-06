@@ -29,6 +29,18 @@
                 document.getElementById(id).setAttribute("style","color:darkgrey");
             }
 
+            function playU()
+            {
+                var audio = new Audio("static/tera.mp3");
+                audio.play();
+                show('love');
+            }
+
+            function iloveu(element)
+            {
+                window.location.href = window.location.origin + "/iloveu";
+            }
+
         </script>
 
         <div class="questionArea">
@@ -42,7 +54,7 @@
                 {%for i in [tlen+2,tlen,tlen+5,tlen+3]%}
 
                 <div class="answer" id={{i}}>
-                    <input type="radio" onclick="happy(this,'{{i}}')" name="ans"> 
+                    <input type="radio" onclick="('{{i}}'==to.length)?show('happyExp') : hide(this,'{{i}}')" name="ans"> 
                     <label>{{i}}</label>
                 </div>
 
@@ -56,12 +68,12 @@
         
                 <div class="answergroup">
                     <div class="answer"  id="Java" style="display: flex; align-content: center;">
-                        <input type="radio" name="ans"  style="margin-right: 10px;" onclick="hide(this,'Java')"> 
+                        <input type="radio" name="ans"  style="margin-right: 10px;" onclick="this.disabled = true;"> 
                         <img width="20%" src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg">
                     </div>
     
                     <div class="answer" id="Python" style="display: flex; align-content: center;margin-top: 20px;">
-                        <input type="radio" name="ans" style="margin-right: 10px;" onclick="hide(this,'Python')"> 
+                        <input type="radio" name="ans" style="margin-right: 10px;" onclick="this.disabled = true;"> 
                         <img width="40%" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg">
                     </div>
     
@@ -71,7 +83,7 @@
                     </div>
     
                     <div class="answer" id="Java Script" style="display: flex; align-content: center;margin-top: 20px;">
-                        <input type="radio" style="margin-right: 10px;" name="ans" onclick="hide(this,'Java Script')">
+                        <input type="radio" style="margin-right: 10px;" name="ans" onclick="this.disabled = true;">
                         <img width="14%" src="https://logosdownload.com/logo/javascript-logo-512.png">
                     </div>
     
@@ -126,7 +138,7 @@
                         </div>
 
                         <div class="answer" id="u">
-                            <input type="radio" onclick="show('love')" name="ans">
+                            <input type="radio" onclick="playU()" name="ans">
                             <label>U</label>
                         </div>
 
@@ -166,17 +178,17 @@
                     <div class="answergroup">
         
                         <div class="answer" id="dev">
-                            <input type="radio" name="ans" onclick="hide(this)"> 
+                            <input type="radio" name="ans" onclick="hide(this,'dev')"> 
                             <label>Developer missed them.</label>
                         </div>
         
                         <div class="answer" id="rules">
-                            <input type="radio" name="ans" onclick="hide(this)"> 
+                            <input type="radio" name="ans" onclick="hide(this,'rules')"> 
                             <label>English rules are changed.</label>
                         </div>
 
                         <div class="answer" id="meet">
-                            <input type="radio" name="ans" onclick="hide(this)"> 
+                            <input type="radio" name="ans" onclick="hide(this,'meet')"> 
                             <label>They went to meet their love.</label>
                         </div>
         
@@ -345,12 +357,12 @@
                     <div class="answergroup">
         
                         <div class="answer" id="yes">
-                            <input type="radio" name="ans" onclick="show(this,'coffee')"> 
+                            <input type="radio" name="ans" onclick="show('coffee')"> 
                             <label>Yes</label>
                         </div>
         
                         <div class="answer" id="no">
-                            <input type="radio" name="ans" onclick="show(this,'coffee')"> 
+                            <input type="radio" name="ans" onclick="show('coffee')"> 
                             <label>No</label>
                         </div>
                     </div>
@@ -377,7 +389,7 @@
                         </div>
 
                         <div class="answer" id="notsure"> 
-                            <input type="radio" name="ans" onclick="hide(this,'notsure')"> 
+                            <input type="radio" name="ans" onclick="show('moon')"> 
                             <label>Not Sure</label>
                         </div>
 
@@ -423,7 +435,7 @@
                         </div>
         
                         <div class="answer" id="no">
-                            <input type="radio" name="ans" onclick="show('drugs)"> 
+                            <input type="radio" name="ans" onclick="show('drugs')"> 
                             <label>No</label>
                         </div>
                     </div>
@@ -450,7 +462,7 @@
                         </div>
 
                         <div class="answer" id="10">
-                            <input type="radio" name="ans" onclick="wonders(this,10)"> 
+                            <input type="radio" name="ans" onclick="hide(this,10)"> 
                             <label>10</label>
                         </div>
                     </div>
