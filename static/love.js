@@ -12,11 +12,13 @@ function redirect(e)
         return;
     }
 
-/*    if(!window.isSecureContext)
+    /*   
+    if(!window.isSecureContext)
     {
         alert("not secure");
         return;
-    } */
+    } 
+    */
 
     var link = window.location.origin +"/you?from=" + name + "&to=" + their +"&song=" + song.replaceAll(" ","%");
     navigator.clipboard.writeText(link);

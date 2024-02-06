@@ -7,28 +7,21 @@
 
     <body>
 
+        <script src="static/songs.js"></script>
         <script>
             var url = "{{url}}".replaceAll("amp;","");
             console.log(url);
             
             "{% if url!=None %}"
 
-            var audio = new Audio(url);
-            audio.loop = true;
-
-            console.log(url);
-
-            window.onclick = (e) => 
-            {
-                audio.play();
-            };
+            play(url);
 
             "{% endif %}"
 
-            window.onload = (e) => 
+           /* window.onload = (e) => 
             {
-                alert("Click anywhere");
-            }; 
+                alert("Click anywhere to play or pause.");
+            };  */
         </script>
 
         <style>

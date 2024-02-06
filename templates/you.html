@@ -11,6 +11,7 @@
 
     <body>
 
+        <script src="static/songs.js"></script>
         <script>
 
             const name = "{{frm}}";
@@ -31,8 +32,9 @@
 
             function playU()
             {
-                var audio = new Audio("static/tera.mp3");
-                audio.play();
+                // var audio = new Audio("static/tera.mp3");
+                // audio.play();
+                play("static/tera.mp3");
                 show('love');
             }
 
