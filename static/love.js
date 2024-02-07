@@ -26,7 +26,7 @@ function redirect(e)
     clipboard.
     writeText(link).
 
-    then(success => {
+    then(() => {
         alert("Link Copied to clipboard");
     }).
 
