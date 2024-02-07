@@ -16,10 +16,12 @@ function setListener(source,element)
 
         if(audio.paused)
         {
+            console.log("playing");
             audio.play();
         }
         else 
         {
+            console.log("playing");
             audio.pause();
         }
     }

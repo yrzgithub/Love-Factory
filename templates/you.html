@@ -19,9 +19,10 @@
 
             console.log(name);
 
-            function showU()
+            function showU(element)
             {
-                setListener('static/tera.mp3',document.getElementById('u')).play();
+                element.onclick = null;
+                setListener('static/tera.mp3',element).play();
                 show("lovedes");
             }
 
@@ -138,7 +139,7 @@
                         </div>
 
                         <div class="answer" id="u">
-                            <input type="radio" id="uoption" onclick="showU()" name="ans">
+                            <input type="radio" id="uoption" onclick="showU(this)" name="ans">
                             <label>U</label>
                         </div>
 
@@ -274,35 +275,7 @@
 
                     <p class="description" style="display:none" id="physics"><b>Answer</b> : Lens<br><br><b>Reason</b> : I always want to keep You in my Eyes.</p>
 
-                    <div class="question">9. What is You?</div>
-        
-                    <div class="answergroup">
-        
-                        <div class="answer" id="artist">
-                            <input type="radio" name="ans" onclick="hide(this,'artist')"> 
-                            <label>Artist</label>
-                        </div>
-        
-                        <div class="answer" id="gardener">
-                            <input type="radio" name="ans" onclick="hide(this,'gardener')"> 
-                            <label>Gardener</label>
-                        </div>
-
-                        <div class="answer" id="both">
-                            <input type="radio" name="ans" onclick="show('ur')"> 
-                            <label>Both</label>
-                        </div>
-
-                        <div class="answer" id="arent"> 
-                            <input type="radio" name="ans" onclick="hide(this,'arent')"> 
-                            <label>Both aren't</label>
-                        </div>
-
-                    </div>
-
-                    <p class="description" style="display:none" id="ur"><b>Gardener : </b>You plant fragrant flowers in my heart.<br><br><b>Artist : </b>You paint my life and make it colorful.</p>
-
-                    <div class="question">10. Have you born in Highway?</div>
+                    <div class="question">9. Have you born in Highway?</div>
         
                     <div class="answergroup">
         
@@ -319,6 +292,34 @@
 
                 <p class="description" style="display:none" id="highway"><b>Answer</b> : Yes<br><br><b>Reason</b> : That's where most of the accidents happen.</p>
 
+                <div class="question">10. What is You?</div>
+        
+                <div class="answergroup">
+    
+                    <div class="answer" id="artist">
+                        <input type="radio" name="ans" onclick="hide(this,'artist')"> 
+                        <label>Artist</label>
+                    </div>
+    
+                    <div class="answer" id="gardener">
+                        <input type="radio" name="ans" onclick="hide(this,'gardener')"> 
+                        <label>Gardener</label>
+                    </div>
+
+                    <div class="answer" id="both">
+                        <input type="radio" name="ans" onclick="show('ur')"> 
+                        <label>Both</label>
+                    </div>
+
+                    <div class="answer" id="arent"> 
+                        <input type="radio" name="ans" onclick="hide(this,'arent')"> 
+                        <label>Both aren't</label>
+                    </div>
+
+                </div>
+
+                <p class="description" style="display:none" id="ur"><b>Gardener : </b>You plant fragrant flowers in my heart.<br><br><b>Artist : </b>You paint my life and make it colorful.</p>
+                
                 <div class="question">11. What's your Father's name?</div>
         
                     <div class="answergroup">
