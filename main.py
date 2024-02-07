@@ -27,7 +27,6 @@ def you():
         frm = args["from"].strip()
         to = args["to"].strip()
         song = args["dedicate"].strip()
-        print(song)
         
     except:
         return "<error>Error code : 420<br>Reason : Invalid Data</error>"
