@@ -10,9 +10,9 @@ function setListener(source,element)
     audio.loop = false;
     audio.paused = true;
 
-    element.onclick = (e) => {
+    if(element.onclick!=null) return audio;
 
-        console.log("onclick set");
+    element.onclick = (e) => {
 
         if(audio.paused)
         {
@@ -23,6 +23,8 @@ function setListener(source,element)
             audio.pause();
         }
     }
+
+    console.log("onclick set");
 
     return audio;
 }

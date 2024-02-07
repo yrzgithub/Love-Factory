@@ -19,6 +19,12 @@
 
             console.log(name);
 
+            function showU()
+            {
+                setListener('static/tera.mp3',document.getElementById('uoption')).play();
+                show("lovedes");
+            }
+
             function show(id)
             {
                 document.getElementById(id).setAttribute("style","display:block;")
@@ -28,13 +34,6 @@
             {
                 element.disabled = true;
                 document.getElementById(id).setAttribute("style","color:darkgrey");
-            }
-
-            function showU()
-            {
-                // var audio = new Audio("static/tera.mp3");
-                // audio.play();
-                show('love');
             }
 
             function iloveu(element)
@@ -55,7 +54,7 @@
                 {%for i in [tlen+2,tlen,tlen+5,tlen+3]%}
 
                 <div class="answer" id={{i}}>
-                    <input type="radio" onclick="('{{i}}'==to.length) ? show('happyExp') : hide(this,'{{i}}')" name="ans"> 
+                    <input type="radio" onclick="var toLenght = '{{to}}';('{{i}}'==to.length) ? show('happyExp') : hide(this,'{{i}}')" name="ans"> 
                     <label>{{i}}</label>
                 </div>
 
@@ -143,13 +142,9 @@
                             <label>U</label>
                         </div>
 
-                        <script>
-                            setListener('static/tera.mp3',document.getElementById('uoption'));
-                        </script>
-
                     </div>
 
-                    <p class="description" style="display:none" id="love"><b>Love You Too.</b></p>
+                    <p class="description" style="display:none" id="lovedes"><b>Love You Too.</b></p>
                     
 
                     <div id="lettersq" class="question"></div>

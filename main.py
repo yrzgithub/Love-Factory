@@ -2,6 +2,7 @@ from flask import *
 from pafy import new
 # from pywhatkit import playonyt
 from youtubesearchpython import VideosSearch
+from base64 import b64decode
 
 
 web = Flask(__name__)
@@ -25,25 +26,25 @@ def you():
     try:
         frm = args["from"].strip()
         to = args["to"].strip()
-        song = args["song"].strip()
+        song = args["dedicate"].strip()
         print(song)
         
     except:
-        return "<html><error>code=100<br>Invalid Data</error></html>"
+        return "<error>Error code : 420<br>Reason : Invalid Data</error>"
         
-    return render_template("you.html",frm=frm,to=to,tlen=len(to))
+    return render_template("you.html",frm=frm,to=to,tlen=len(to.replace(" ","")))
 
 
 @web.route("/iloveu")
 def love():
     url = None
     if song!=None:
-        query = song.replace("%"," ")
+        query = b64decode(song).decode()
         yt_url = VideosSearch(query).result()["result"][0]["link"]
         url = new(yt_url).getbestaudio().url
     
     else:
-        return "<html>Error Code : 420<br>Change the query and try again.</html>"
+        return "<error>Error Code : 420<br>Change the query and try again.</error>"
 
     return render_template("love.html",url=url)
 

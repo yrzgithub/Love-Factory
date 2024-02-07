@@ -20,7 +20,7 @@ function redirect(e)
     } 
     */
 
-    var link = window.location.origin +"/you?from=" + name + "&to=" + their +"&song=" + song.replaceAll(" ","%");
+    var link = window.location.origin +"/you?from=" + name + "&to=" + their +"&dedicate=" + btoa(song);
     navigator.clipboard.writeText(link);
 
     alert("Link Copied to clipboard");
@@ -30,7 +30,7 @@ function redirect(e)
 
 function select(element,gen)
 {
-    var areu = document.getElementById("areu");
+   /* var areu = document.getElementById("areu");
 
     if(gen=="boy")
     {
@@ -39,5 +39,5 @@ function select(element,gen)
     else 
     {
         girl.setAttribute("style","background-color:lightpink;");
-    }
+    } */
 }
