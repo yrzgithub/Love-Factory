@@ -1,10 +1,11 @@
 function play(source)
 {
-    console.log(source);
+    console.log("Playing",source);
 
     var audio = new Audio(source);
     audio.loop = false;
-    audio.paused = true;
+    audio.play();
+    // audio.paused = true;
 
     window.onclick = (e) => {
         if(audio.paused)
