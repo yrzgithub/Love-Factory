@@ -21,11 +21,19 @@ function redirect(e)
     */
 
     var link = window.location.origin +"/you?from=" + name + "&to=" + their +"&dedicate=" + btoa(song);
-    navigator.clipboard.writeText(link);
 
-    alert("Link Copied to clipboard");
+    navigator.
+    clipboard.
+    writeText(link).
+
+    then(success => {
+        alert("Link Copied to clipboard");
+        console.log(success,link);
+    }).
     
-    console.log(link);
+    catch(error => {
+        console.log(error);
+    });
 }
 
 function select(element,gen)
