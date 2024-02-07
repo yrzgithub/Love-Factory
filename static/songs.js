@@ -1,16 +1,18 @@
 function play(source)
 {
-    var audio = new Audio(source);
-    audio.loop = false;
+    var audio = setListener(source,element);
     audio.play();
 }
 
-function setListener(source,element)
+function setListener(source)
 {
     var audio = new Audio(source);
     audio.loop = false;
+    audio.paused = true;
 
-    element.onclick = (e) => {
+    window.onclick = (e) => {
+
+        console.log("onclick set");
 
         if(audio.paused)
         {
@@ -21,4 +23,6 @@ function setListener(source,element)
             audio.pause();
         }
     }
+
+    return audio;
 }

@@ -19,9 +19,6 @@
 
             console.log(name);
 
-            var u = document.getElementById("u");
-            setListener("static/tera.mp3",u);
-
             function show(id)
             {
                 document.getElementById(id).setAttribute("style","display:block;")
@@ -33,7 +30,7 @@
                 document.getElementById(id).setAttribute("style","color:darkgrey");
             }
 
-            function playU()
+            function showU()
             {
                 // var audio = new Audio("static/tera.mp3");
                 // audio.play();
@@ -58,7 +55,7 @@
                 {%for i in [tlen+2,tlen,tlen+5,tlen+3]%}
 
                 <div class="answer" id={{i}}>
-                    <input type="radio" onclick="('{{i}}'==to.length)?show('happyExp') : hide(this,'{{i}}')" name="ans"> 
+                    <input type="radio" onclick="('{{i}}'==to.length) ? show('happyExp') : hide(this,'{{i}}')" name="ans"> 
                     <label>{{i}}</label>
                 </div>
 
@@ -142,9 +139,13 @@
                         </div>
 
                         <div class="answer" id="u">
-                            <input type="radio" onclick="playU()" name="ans">
+                            <input type="radio" onclick="showU()" name="ans">
                             <label>U</label>
                         </div>
+
+                        <script>
+                            setListener('static/tera.mp3');
+                        </script>
 
                     </div>
 
