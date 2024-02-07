@@ -19,6 +19,9 @@
 
             console.log(name);
 
+            var u = document.getElementById("u");
+            play("static/tera.mp3",u);
+
             function show(id)
             {
                 document.getElementById(id).setAttribute("style","display:block;")
@@ -34,7 +37,6 @@
             {
                 // var audio = new Audio("static/tera.mp3");
                 // audio.play();
-                play("static/tera.mp3");
                 show('love');
             }
 

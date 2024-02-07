@@ -1,4 +1,4 @@
-function play(source)
+function play(source,element)
 {
     console.log("Playing",source);
 
@@ -7,7 +7,7 @@ function play(source)
     audio.play();
     // audio.paused = true;
 
-    window.onclick = (e) => {
+    element.onclick = (e) => {
         if(audio.paused)
         {
             audio.play();
