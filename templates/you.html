@@ -54,7 +54,7 @@
                 {%for i in [tlen+2,tlen,tlen+5,tlen+3]%}
 
                 <div class="answer" id={{i}}>
-                    <input type="radio" onclick="var toLenght = '{{to}}';('{{i}}'==to.length) ? show('happyExp') : hide(this,'{{i}}')" name="ans"> 
+                    <input type="radio" onclick="('{{i}}'==to.replaceAll(' ','').length) ? show('happyExp') : hide(this,'{{i}}')" name="ans"> 
                     <label>{{i}}</label>
                 </div>
 
