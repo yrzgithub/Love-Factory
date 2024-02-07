@@ -28,9 +28,8 @@ function redirect(e)
 
     then(success => {
         alert("Link Copied to clipboard");
-        console.log(success,link);
     }).
-    
+
     catch(error => {
         console.log(error);
     });
