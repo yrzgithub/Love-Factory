@@ -1,6 +1,6 @@
 function play(source)
 {
-    var audio = setListener(source);
+    var audio = setListener(source,window);
     audio.play();
 }
 
