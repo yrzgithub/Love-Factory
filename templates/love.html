@@ -8,13 +8,14 @@
     <body>
 
         <script src="static/songs.js"></script>
+
         <script>
             var url = "{{url}}".replaceAll("amp;","");
             console.log(url);
             
             "{% if url!=None %}"
 
-            play(url,window);
+            play(url);
 
             "{% endif %}"
 
@@ -22,6 +23,7 @@
             {
                 alert("Click anywhere to play or pause.");
             };  */
+
         </script>
 
         <style>
