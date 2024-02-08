@@ -7,6 +7,10 @@ input {
     cursor: pointer;
 }
 
+.description * {
+    font-size: inherit;
+}
+
 .question, .first {
     display: inline-flex;
     font-size: inherit;
@@ -39,6 +43,10 @@ button
 
 .question,.first {
     line-height: 1.8em;
+}
+
+.description * {
+    line-height: 2em;
 }
 
 h1 
