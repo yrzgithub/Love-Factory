@@ -9,7 +9,6 @@ body {
     justify-content: center;
     margin: auto;
     background: url("https://i.gifer.com/3jni.gif");
-    background-size:100%;
 }
 
 form {
@@ -60,6 +59,10 @@ button {
         font-size: 1.1rem;
     }
 
+    body {
+        background-size:50%;
+    }
+
     #girl 
     {
         height: 6rem;
@@ -93,6 +96,10 @@ button {
 
     * {
         font-size: 1rem;
+    }
+
+    body {
+        background-size:100%;
     }
 
     form {

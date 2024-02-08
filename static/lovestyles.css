@@ -28,6 +28,7 @@ input {
     flex-direction: column;
     background-color:lightyellow;
     margin: auto;
+    border-radius: 12px;
 }
 
 button 
