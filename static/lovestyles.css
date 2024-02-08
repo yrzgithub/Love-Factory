@@ -104,15 +104,15 @@ h1
         width: 70%;
         margin-bottom: 10%;
         font-size: 1.2rem;
-        margin-top: 12%;
-        margin-bottom: 12%;
+        margin-top: 15%;
+        margin-bottom: 15%;
         padding-top: 1%;
         padding-bottom: 1%;
     }
 
     .first {
         font-size: 1.2rem;
-        margin-top: 2%;
+        margin-top: 0%;
         margin-left: 5%;
     }
 
@@ -123,7 +123,7 @@ h1
     }
 
     h1 {
-        font-size: 1.6rem;
+        font-size: 1.7rem;
         margin-top: 10%;
         margin-bottom: 10%;
     }
