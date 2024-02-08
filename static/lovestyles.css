@@ -3,10 +3,6 @@
     margin-right: auto;
 }
 
-* :not(h1) {
-    text-align:justify;
-}
-
 input {
     cursor: pointer;
 }
@@ -19,6 +15,7 @@ input {
 .question, .first {
     display: inline-flex;
     font-size: inherit;
+    text-align: justify;
 }
 
 .question, .first * {
@@ -60,6 +57,10 @@ h1
     margin-top: 1%;
     display: flex;
     flex-direction: column;
+}
+
+.description {
+    margin-right: 5%;
 }
 
 @media screen and (min-width : 768px)
