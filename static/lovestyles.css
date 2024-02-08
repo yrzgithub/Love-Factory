@@ -12,10 +12,6 @@ input {
     font-size: inherit;
 }
 
-.description,.question,.first {
-    line-height: 1.8em;
-}
-
 .question, .first * {
     font-size: inherit;
 }
@@ -39,6 +35,10 @@ button
     border-radius: 12px;
     cursor: pointer;
     font-weight: bold;
+}
+
+.question,.first {
+    line-height: 1.8em;
 }
 
 h1 
