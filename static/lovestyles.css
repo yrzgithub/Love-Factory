@@ -10,6 +10,9 @@ input {
 .question, .first {
     display: inline-flex;
     font-size: inherit;
+}
+
+.description,.question,.first {
     line-height: 1.8em;
 }
 

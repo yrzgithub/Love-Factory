@@ -50,7 +50,7 @@
 
             <div class="first">
                 <label style="margin-right: .3em;">1.</label>
-                <label>The no. of letters in "Happiness"?</label>
+                <label>What's the no. of letters in "HAPPINESS"?</label>
             </div>
         
             <div id="happy" class="answergroup">
@@ -157,7 +157,10 @@
                     <p class="description" style="display:none" id="lovedes"><b>Love You Too.</b></p>
                     
 
-                    <div id="lettersq" class="question"></div>
+                    <div class="question">
+                        <label style="margin-right: .3em;">5.</label>
+                        <label id="lettersq"></label>
+                    </div>
         
                     <script>
                         var uname = to.toUpperCase();
@@ -178,7 +181,7 @@
                             console.log(alphabets,missing);
                         }
 
-                        var question = "5. " + alphabets + "<br><br>&nbsp;&nbsp;&nbsp; Where is " + missing + "?";
+                        var question = alphabets + "<br>Where is " + missing + "?";
                         console.log("question",question);
 
                         document.getElementById("lettersq").innerHTML = question;
