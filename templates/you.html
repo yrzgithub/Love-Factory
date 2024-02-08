@@ -55,7 +55,7 @@
                 {%for i in [tlen+2,tlen,tlen+5,tlen+3]%}
 
                 <div class="answer" id={{i}}>
-                    <input type="radio" onclick="('{{i}}'==to.replaceAll(' ','').length) ? show('happyExp') : hide(this,'{{i}}')" name="ans"> 
+                    <input type="radio" onclick="('{{i}}'==to.replaceAll(' ','').length) ? show('happyExp') : hide(this,'{{i}}')" name="happy"> 
                     <label>{{i}}</label>
                 </div>
 
@@ -63,28 +63,28 @@
 
             </div>
 
-            <p class="description" style="display:none" id="happyExp"><b>Answer</b> : {{tlen}}<br><br><b>Reason</b> : "{{to}}" has {{tlen}} letters.</p>
+            <p class="description" style="display:none" id="happyExp"><b>Answer</b> : {{tlen}}<br><br><b>Reason</b> : "{{to.title()}}" has {{tlen}} letters.</p>
 
             <div class="question">2. In which language, Your DNA is Coded?</div>
         
                 <div class="answergroup">
                     <div class="answer"  id="Java" style="display: flex; align-content: center;">
-                        <input type="radio" name="ans"  style="margin-right: 10px;" onclick="this.disabled = true;"> 
+                        <input type="radio" name="dna"  style="margin-right: 10px;" onclick="this.disabled = true;"> 
                         <img width="35%" src="https://img.icons8.com/color/144/java-coffee-cup-logo--v1.png">
                     </div>
     
                     <div class="answer" id="Python" style="display: flex; align-content: center;margin-top: 20px;">
-                        <input type="radio" name="ans" style="margin-right: 10px;" onclick="this.disabled = true;"> 
+                        <input type="radio" name="dna" style="margin-right: 10px;" onclick="this.disabled = true;"> 
                         <img width="35%" src="https://img.icons8.com/color/144/python--v1.png">
                     </div>
     
                     <div class="answer" id="C++" style="display: flex; align-content: center;margin-top: 20px;">
-                        <input type="radio" name="ans" style="margin-right: 10px;" onclick="show('dna')">
+                        <input type="radio" name="dna" style="margin-right: 10px;" onclick="show('dna')">
                         <img width="35%" src="https://img.icons8.com/color/144/c-plus-plus-logo.png">
                     </div>
     
                     <div class="answer" id="Java Script" style="display: flex; align-content: center;margin-top: 20px;">
-                        <input type="radio" style="margin-right: 10px;" name="ans" onclick="this.disabled = true;">
+                        <input type="radio" style="margin-right: 10px;" name="dna" onclick="this.disabled = true;">
                         <img width="35%" src="https://img.icons8.com/color/144/c-programming.png">
                     </div>
     
@@ -97,17 +97,17 @@
                     <div  class="answergroup">
         
                         <div class="answer" id="yes">
-                            <input type="radio" name="ans" onclick="show('tales')"> 
+                            <input type="radio" name="tales" onclick="show('tales')"> 
                             <label>Yes</label>
                         </div>
         
                         <div class="answer" id="no">
-                            <input type="radio" name="ans" onclick="show('tales')"> 
+                            <input type="radio" name="tales" onclick="show('tales')"> 
                             <label>No</label>
                         </div>
         
                         <div class="answer" id="no idea">
-                            <input type="radio" name="ans" onclick="show('tales')">
+                            <input type="radio" name="tales" onclick="show('tales')">
                             <label>No Idea</label>
                         </div>
                     </div>
@@ -124,22 +124,22 @@
                     <div id="happy" class="answergroup">
 
                         <div class="answer" id="j">
-                            <input type="radio" onclick="hide(this,'j')" name="ans"> 
+                            <input type="radio" onclick="hide(this,'j')" name="abcd"> 
                             <label>J</label>
                         </div>
 
                         <div class="answer" id="g">
-                            <input type="radio" onclick="hide(this,'g')" name="ans"> 
+                            <input type="radio" onclick="hide(this,'g')" name="abcd"> 
                             <label>G</label>
                         </div>
 
                         <div class="answer" id="a">
-                            <input type="radio" onclick="hide(this,'a')" name="ans">
+                            <input type="radio" onclick="hide(this,'a')" name="abcd">
                             <label>A</label>
                         </div>
 
                         <div class="answer" id="u">
-                            <input type="radio" id="uoption" onclick="showU(this)" name="ans">
+                            <input type="radio" id="uoption" onclick="showU(this)" name="abcd">
                             <label>U</label>
                         </div>
 
@@ -179,22 +179,22 @@
                     <div class="answergroup">
         
                         <div class="answer" id="dev">
-                            <input type="radio" name="ans" onclick="hide(this,'dev')"> 
+                            <input type="radio" name="abcd" onclick="hide(this,'dev')"> 
                             <label>Developer missed them.</label>
                         </div>
         
                         <div class="answer" id="rules">
-                            <input type="radio" name="ans" onclick="hide(this,'rules')"> 
+                            <input type="radio" name="abcd" onclick="hide(this,'rules')"> 
                             <label>English rules are changed.</label>
                         </div>
 
                         <div class="answer" id="meet">
-                            <input type="radio" name="ans" onclick="hide(this,'meet')"> 
+                            <input type="radio" name="abcd" onclick="hide(this,'meet')"> 
                             <label>They went to meet their love.</label>
                         </div>
         
                         <div class="answer" id="else">
-                            <input type="radio" name="ans" onclick="show('abcd')">
+                            <input type="radio" name="abcd" onclick="show('abcd')">
                             <label>Somewhere Else</label>
                         </div>
                     </div>
@@ -206,12 +206,12 @@
                     <div class="answergroup">
         
                         <div class="answer">
-                            <input type="radio" name="ans" onclick="show('camera')"> 
+                            <input type="radio" name="camera" onclick="show('camera')"> 
                             <label>Yes</label>
                         </div>
         
                         <div class="answer">
-                            <input type="radio" name="ans" onclick="show('camera')"> 
+                            <input type="radio" name="camera" onclick="show('camera')"> 
                             <label>No</label>
                         </div>
 
@@ -224,22 +224,22 @@
                     <div class="answergroup">
         
                         <div class="answer" id="4">
-                            <input type="radio" name="ans" onclick="hide(this,4)"> 
+                            <input type="radio" name="lettersluv" onclick="hide(this,4)"> 
                             <label>4</label>
                         </div>
         
                         <div class="answer" id="2">
-                            <input type="radio" name="ans" onclick="show('letters')"> 
+                            <input type="radio" name="lettersluv" onclick="show('letters')"> 
                             <label>2</label>
                         </div>
 
                         <div class="answer" id="7">
-                            <input type="radio" name="ans" onclick="hide(this,7)"> 
+                            <input type="radio" name="lettersluv" onclick="hide(this,7)"> 
                             <label>7</label>
                         </div>
 
                         <div class="answer" id="1"> 
-                            <input type="radio" name="ans" onclick="hide(this,1)"> 
+                            <input type="radio" name="lettersluv" onclick="hide(this,1)"> 
                             <label>1</label>
                         </div>
 
@@ -252,22 +252,22 @@
                     <div class="answergroup">
         
                         <div class="answer" id="momentum">
-                            <input type="radio" name="ans" onclick="hide(this,'momentum')"> 
+                            <input type="radio" name="physics" onclick="hide(this,'momentum')"> 
                             <label>Momentum</label>
                         </div>
         
                         <div class="answer" id="gravity">
-                            <input type="radio" name="ans" onclick="hide(this,'gravity')"> 
+                            <input type="radio" name="physics" onclick="hide(this,'gravity')"> 
                             <label>Gravity</label>
                         </div>
 
                         <div class="answer" id="lens">
-                            <input type="radio" name="ans" onclick="show('physics')"> 
+                            <input type="radio" name="physics" onclick="show('physics')"> 
                             <label>Lens</label>
                         </div>
 
                         <div class="answer" id="quantum"> 
-                            <input type="radio" name="ans" onclick="hide(this,'quantum')"> 
+                            <input type="radio" name="physics" onclick="hide(this,'quantum')"> 
                             <label>Quantum Particle</label>
                         </div>
 
@@ -280,12 +280,12 @@
                     <div class="answergroup">
         
                         <div class="answer" id="yes">
-                            <input type="radio" name="ans" onclick="show('highway')"> 
+                            <input type="radio" name="highway" onclick="show('highway')"> 
                             <label>Yes</label>
                         </div>
         
                         <div class="answer" id="no">
-                            <input type="radio" name="ans" onclick="show('highway')"> 
+                            <input type="radio" name="highway" onclick="show('highway')"> 
                             <label>No</label>
                         </div>
                     </div>
@@ -297,22 +297,22 @@
                 <div class="answergroup">
     
                     <div class="answer" id="artist">
-                        <input type="radio" name="ans" onclick="hide(this,'artist')"> 
+                        <input type="radio" name="you" onclick="hide(this,'artist')"> 
                         <label>Artist</label>
                     </div>
     
                     <div class="answer" id="gardener">
-                        <input type="radio" name="ans" onclick="hide(this,'gardener')"> 
+                        <input type="radio" name="you" onclick="hide(this,'gardener')"> 
                         <label>Gardener</label>
                     </div>
 
                     <div class="answer" id="both">
-                        <input type="radio" name="ans" onclick="show('ur')"> 
+                        <input type="radio" name="you" onclick="show('ur')"> 
                         <label>Both</label>
                     </div>
 
                     <div class="answer" id="arent"> 
-                        <input type="radio" name="ans" onclick="hide(this,'arent')"> 
+                        <input type="radio" name="you" onclick="hide(this,'arent')"> 
                         <label>Both aren't</label>
                     </div>
 
@@ -325,22 +325,22 @@
                     <div class="answergroup">
         
                         <div class="answer" id="Practice">
-                            <input type="radio" name="ans" onclick="show('father')"> 
+                            <input type="radio" name="father" onclick="show('father')"> 
                             <label>Practice</label>
                         </div>
         
                         <div class="answer" id="God">
-                            <input type="radio" name="ans" onclick="hide(this,'God')"> 
+                            <input type="radio" name="father" onclick="hide(this,'God')"> 
                             <label>God</label>
                         </div>
 
                         <div class="answer" id="Brahma">
-                            <input type="radio" name="ans" onclick="hide(this,'Brahma')"> 
+                            <input type="radio" name="father" onclick="hide(this,'Brahma')"> 
                             <label>Brahma</label>
                         </div>
 
                         <div class="answer" id="None">
-                            <input type="radio" name="ans" onclick="hide(this,'None')"> 
+                            <input type="radio" name="father" onclick="hide(this,'None')"> 
                             <label>None</label>
                         </div>
                     </div>
@@ -352,12 +352,12 @@
                     <div class="answergroup">
         
                         <div class="answer" id="yes">
-                            <input type="radio" name="ans" onclick="show('coffee')"> 
+                            <input type="radio" name="coffee" onclick="show('coffee')"> 
                             <label>Yes</label>
                         </div>
         
                         <div class="answer" id="no">
-                            <input type="radio" name="ans" onclick="show('coffee')"> 
+                            <input type="radio" name="coffee" onclick="show('coffee')"> 
                             <label>No</label>
                         </div>
                     </div>
@@ -369,22 +369,22 @@
                     <div class="answergroup">
         
                         <div class="answer" id="go">
-                            <input type="radio" name="ans" onclick="hide(this,'go')"> 
+                            <input type="radio" name="moon" onclick="hide(this,'go')"> 
                             <label>I can go</label>
                         </div>
         
                         <div class="answer" id="holiday">
-                            <input type="radio" name="ans" onclick="hide(this,'holiday')"> 
+                            <input type="radio" name="moon" onclick="hide(this,'holiday')"> 
                             <label>It may be a holiday.</label>
                         </div>
 
                         <div class="answer" id="confusion">
-                            <input type="radio" name="ans" onclick="show('moon')"> 
+                            <input type="radio" name="moon" onclick="show('moon')"> 
                             <label>It creates confusion</label>
                         </div>
 
                         <div class="answer" id="notsure"> 
-                            <input type="radio" name="ans" onclick="show('moon')"> 
+                            <input type="radio" name="moon" onclick="show('moon')"> 
                             <label>Not Sure</label>
                         </div>
 
@@ -397,22 +397,22 @@
                     <div class="answergroup">
         
                         <div class="answer" id="Kannamma">
-                            <input type="radio" name="ans" onclick="show('nick')"> 
+                            <input type="radio" name="namekannamma" onclick="show('nick')"> 
                             <label>Kannamma</label>
                         </div>
         
                         <div class="answer" id="luv">
-                            <input type="radio" name="ans" onclick="hide(this,'luv')"> 
+                            <input type="radio" name="namekannamma" onclick="hide(this,'luv')"> 
                             <label>Love</label>
                         </div>
 
                         <div class="answer" id="wifeee">
-                            <input type="radio" name="ans" onclick="hide(this,'wifeee')"> 
+                            <input type="radio" name="namekannamma" onclick="hide(this,'wifeee')"> 
                             <label>Wifeee</label>
                         </div>
 
                         <div class="answer" id="kulfi"> 
-                            <input type="radio" name="ans" onclick="hide(this,'kulfi')"> 
+                            <input type="radio" name="namekannamma" onclick="hide(this,'kulfi')"> 
                             <label>Kulfi</label>
                         </div>
 
@@ -425,12 +425,12 @@
                     <div class="answergroup">
         
                         <div class="answer" id="yes">
-                            <input type="radio" name="ans" onclick="show('drugs')"> 
+                            <input type="radio" name="drugs" onclick="show('drugs')"> 
                             <label>Yes</label>
                         </div>
         
                         <div class="answer" id="no">
-                            <input type="radio" name="ans" onclick="show('drugs')"> 
+                            <input type="radio" name="drugs" onclick="show('drugs')"> 
                             <label>No</label>
                         </div>
                     </div>
@@ -442,22 +442,22 @@
                     <div class="answergroup">
         
                         <div class="answer" id="12">
-                            <input type="radio" name="ans" onclick="hide(this,12)"> 
+                            <input type="radio" name="wonders" onclick="hide(this,12)"> 
                             <label>11 or 12</label>
                         </div>
         
                         <div class="answer" id="9">
-                            <input type="radio" name="ans" onclick="show('wonders')"> 
+                            <input type="radio" name="wonders" onclick="show('wonders')"> 
                             <label>9 or 10</label>
                         </div>
 
                         <div class="answer" id="6">
-                            <input type="radio" name="ans" onclick="hide(this,6)"> 
+                            <input type="radio" name="wonders" onclick="hide(this,6)"> 
                             <label>6</label>
                         </div>
 
                         <div class="answer" id="10">
-                            <input type="radio" name="ans" onclick="hide(this,10)"> 
+                            <input type="radio" name="wonders" onclick="hide(this,10)"> 
                             <label>10</label>
                         </div>
                     </div>
