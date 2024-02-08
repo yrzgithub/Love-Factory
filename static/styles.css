@@ -96,8 +96,12 @@ button {
     }
 
     form {
-        padding: 10%;
-        margin: 5%;
+        padding-top: 10%;
+        padding-bottom: 10%;
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-right: 5%;
+        margin-left: 4%;
     }
 
     input {
