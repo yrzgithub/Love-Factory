@@ -10,6 +10,7 @@ input {
 .question, .first {
     display: inline-flex;
     font-size: inherit;
+    line-height: 1.8em;
 }
 
 .question, .first * {
@@ -155,5 +156,9 @@ h1
         margin-left: 8%;
         margin-top: 5%;
         font-size: 1.1rem;
+    }
+
+    .answer label {
+        font-size: inherit;
     }
 }
