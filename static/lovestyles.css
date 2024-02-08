@@ -65,6 +65,10 @@ h1
 
 @media screen and (min-width : 768px)
 {
+    body {
+        background:url('https://i.gifer.com/3jni.gif');
+    }
+
     button {
         margin-top: 5%;
         margin-bottom: 5%;
@@ -100,10 +104,6 @@ h1
         font-size: 1.3em;
         margin-left: 8%;
 
-    }
-
-    body {
-        background:url('https://i.gifer.com/3jni.gif');
     }
 
     h1 {
