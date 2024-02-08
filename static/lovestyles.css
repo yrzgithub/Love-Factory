@@ -3,12 +3,17 @@
     margin-right: auto;
 }
 
+* :not(h1) {
+    text-align:justify;
+}
+
 input {
     cursor: pointer;
 }
 
 .description * {
     font-size: inherit;
+    line-height: 2em;
 }
 
 .question, .first {
@@ -43,10 +48,7 @@ button
 
 .question,.first {
     line-height: 1.8em;
-}
-
-.description * {
-    line-height: 2em;
+    margin-right: 5%;
 }
 
 h1 
