@@ -7,6 +7,15 @@ input {
     cursor: pointer;
 }
 
+.question, .first {
+    display: inline-flex;
+    font-size: inherit;
+}
+
+.question, .first * {
+    font-size: inherit;
+}
+
 .questionArea 
 {
     display: flex;
@@ -93,7 +102,7 @@ h1
         width: 60%;
     }
 
-    label {
+    .answer label {
         font-size: 1.3rem;
     }
 }
