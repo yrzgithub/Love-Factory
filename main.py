@@ -35,7 +35,7 @@ def you():
     except:
         return "<error>Error code : 420<br>Reason : Invalid Data</error>"
     
-    with open("requests.txt","a") as file:
+    with open("requests.txt","a+") as file:
         file.write(f"from = {frm}, to = {to},  song = {decode(song)}\n")
         file.close()
         
