@@ -5,16 +5,16 @@ from youtubesearchpython import VideosSearch
 from base64 import b64decode
 
 
-app = Flask(__name__)
+web = Flask(__name__)
 song = None
 
 
-@app.route("/")
+@web.route("/")
 def noslash():
     return redirect("generate")
 
 
-@app.route("/generate")
+@web.route("/generate")
 def home():
     return render_template("link.html")
 
@@ -23,7 +23,7 @@ def decode(query):
     return b64decode(query).decode()
 
 
-@app.route("/you")
+@web.route("/you")
 def you():
     global song
     args = request.args
@@ -42,7 +42,7 @@ def you():
     return render_template("you.html",frm=frm,to=to,tlen=len(to.replace(" ","")))
 
 
-@app.route("/iloveu")
+@web.route("/iloveu")
 def love():
     url = None
     if song!=None:
