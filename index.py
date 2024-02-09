@@ -1,1 +1,1 @@
-from wsgi import web
+from wsgi import web as app
