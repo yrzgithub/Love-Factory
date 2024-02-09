@@ -3,6 +3,7 @@
     <head>
         <title>Love Factory</title>
         <link rel="icon" type="image/x-icon" href="\static\favicon.png">
+        <meta charset="UTF-8">
     </head>
 
     <body>
@@ -10,7 +11,7 @@
         <script src="static/songs.js"></script>
 
         <script>
-            var url = "{{url}}".replaceAll("amp;","");
+            var url = decodeURI("{{url}}");  //.replaceAll("amp;","");
             console.log(url);
             
             "{% if url!=None %}"
