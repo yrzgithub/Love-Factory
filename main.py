@@ -47,7 +47,7 @@ def love():
     url = None
     if song!=None:
         query = decode(song)
-        yt_url = VideosSearch(query).result()["result"][0]["link"]
+        yt_url = VideosSearch(query).result()["result"][1]["link"]
         url = new(yt_url).getbestaudio().url
     
     else:
