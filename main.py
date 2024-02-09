@@ -35,9 +35,9 @@ def you():
     except:
         return "<error>Error code : 420<br>Reason : Invalid Data</error>"
     
-    with open("requests.txt","a+") as file:
-        file.write(f"from = {frm}, to = {to},  song = {decode(song)}\n")
-        file.close()
+    # with open("requests.txt","a+") as file:
+    #    file.write(f"from = {frm}, to = {to},  song = {decode(song)}\n")
+    #    file.close()
         
     return render_template("you.html",frm=frm,to=to,tlen=len(to.replace(" ","")))
 
