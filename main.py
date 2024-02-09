@@ -19,6 +19,10 @@ def home():
     return render_template("link.html")
 
 
+def decode(query):
+    return b64decode(query).decode()
+
+
 @web.route("/you")
 def you():
     global song
@@ -30,6 +34,10 @@ def you():
         
     except:
         return "<error>Error code : 420<br>Reason : Invalid Data</error>"
+    
+    with open("requests.txt","a") as file:
+        file.write(f"from = {frm}, to = {to},  song = {decode(song)}\n")
+        file.close()
         
     return render_template("you.html",frm=frm,to=to,tlen=len(to.replace(" ","")))
 
@@ -38,7 +46,7 @@ def you():
 def love():
     url = None
     if song!=None:
-        query = b64decode(song).decode()
+        query = decode(song)
         yt_url = VideosSearch(query).result()["result"][0]["link"]
         url = new(yt_url).getbestaudio().url
     
