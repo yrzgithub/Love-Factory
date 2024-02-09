@@ -45,12 +45,15 @@ def you():
 @web.route("/iloveu")
 def love():
     url = None
-    if song!=None:
+
+    try:
+        song!=None
         query = decode(song)
         yt_url = VideosSearch(query).result()["result"][1]["link"]
         url = new(yt_url).getbestaudio().url
     
-    else:
+    except Exception as e:
+        print(str(e))
         return "<error>Error Code : 420<br>Change the query and try again.</error>"
 
     return render_template("love.html",url=url)
