@@ -51,6 +51,7 @@ def love():
         query = decode(song)
         yt_url = VideosSearch(query).result()["result"][1]["link"]
         url = new(yt_url).getbestaudio().url
+        print(url)
     
     except Exception as e:
         print(str(e))
