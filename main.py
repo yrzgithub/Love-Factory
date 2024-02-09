@@ -54,8 +54,3 @@ def love():
         return "<error>Error Code : 420<br>Change the query and try again.</error>"
 
     return render_template("love.html",url=url)
-
-
-
-if __name__ == "__main__":
-    web.run(debug=True)
