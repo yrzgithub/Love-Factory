@@ -11,7 +11,7 @@
         <script src="static/songs.js"></script>
 
         <script>
-            var url = decodeURI("{{url}}").replaceAll("amp;","");
+            var url = "{{url}}".replaceAll("amp;","");
             console.log(url);
             
             "{% if url!=None %}"
