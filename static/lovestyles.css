@@ -71,11 +71,11 @@ h1
     }
 
     button {
-        margin-top: 15%;
-        margin-bottom: 10%;
+        margin-top: 12%;
+        margin-bottom: 12%;
         padding-top: 8px;
         padding-bottom: 8px;
-        width: 50%;
+        width: 60%;
         font-size: 20px;
     }
 
@@ -127,10 +127,10 @@ h1
 @media screen and (min-width:320px) and (max-width:767px) {                  /*  MOBILE */    
 
     button {
-        width: 70%;
+        width: 80%;
         font-size: 1.2rem;
         margin-top: 20%;
-        margin-bottom: 25%;
+        margin-bottom: 20%;
         padding-top: 1%;
         padding-bottom: 1%;
     }
@@ -149,8 +149,8 @@ h1
 
     h1 {
         font-size: 1.7rem;
-        margin-top: 13%;
-        margin-bottom: 13%;
+        margin-top: 12%;
+        margin-bottom: 12%;
     }
 
     .answergroup {
