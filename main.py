@@ -6,7 +6,7 @@ from base64 import b64decode
 
 
 web = Flask(__name__)
-song = None
+web.config["SECRET_KEY"] = "yrzapps.love_factory"
 
 
 @web.route("/")
@@ -25,14 +25,15 @@ def decode(query):
 
 @web.route("/you")
 def you():
-    global song
     args = request.args
     try:
         frm = args["from"].strip()
         to = args["to"].strip()
         song = args["dedicate"].strip()
+        session["song"] = song
         
-    except:
+    except Exception as e:
+        print(str(e))
         return "<error>Error code : 420<br>Reason : Invalid Data</error>"
     
     # with open("requests.txt","a+") as file:
@@ -44,14 +45,14 @@ def you():
 
 @web.route("/iloveu")
 def love():
-    url = None
+
+    song = session["song"]
 
     try:
-        song!=None
+        song != None
         query = decode(song)
         yt_url = VideosSearch(query).result()["result"][1]["link"]
         url = new(yt_url).getbestaudio().url
-        print(url)
     
     except Exception as e:
         print(str(e))
