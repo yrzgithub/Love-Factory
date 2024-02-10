@@ -11,7 +11,7 @@
         <script src="static/songs.js"></script>
 
         <script>
-            var url = "{{url}}".replaceAll("amp;","");
+          /*  var url = "{{url}}".replaceAll("amp;","");
             console.log(url);
             
             "{% if url!=None %}"
@@ -23,7 +23,7 @@
            /* window.onload = (e) => 
             {
                 alert("Click anywhere to play or pause.");
-            };  */
+            };  */ 
 
         </script>
 
@@ -36,6 +36,12 @@
             }
 
         </style>
+
+        <audio autoplay>
+
+            <source src="{{url}}">
+
+        </audio>
 
         <table id="itable" style="margin: auto;">
 
