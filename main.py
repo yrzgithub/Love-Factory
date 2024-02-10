@@ -46,9 +46,8 @@ def you():
 @web.route("/iloveu")
 def love():
 
-    song = session["song"]
-
     try:
+        song = session["song"]
         song != None
         query = decode(song)
         yt_url = VideosSearch(query).result()["result"][1]["link"]
