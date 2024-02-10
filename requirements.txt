@@ -1,3 +1,4 @@
 Flask
+gunicorn
 modified-pafy
 youtube-search-python
