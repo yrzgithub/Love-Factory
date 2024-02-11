@@ -7,11 +7,16 @@ function redirect(button)
     var boy = document.getElementById("boy").value;
     var girl = document.getElementById("girl").value;
     var song = document.getElementById("song").value; 
+    var spinner = document.getElementById("spinner");
+
+    spinner.setAttribute("class","fa fa-spinner fa-spin");
 
     if(name=="" || their=="")
     {
         return;
     }
+
+    button.innerHTML = "Generating";
 
     fetch("/get_stream_url")
 
@@ -60,6 +65,9 @@ function redirect(button)
                 alert("Change the query and try again");
             });
     
+        })
+        .finally(() => {
+            spinner.setAttribute("class","none");
+            button.innerHTML = "Generate";
         });
-    
 }
