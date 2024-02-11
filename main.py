@@ -43,6 +43,14 @@ def you():
     return render_template("you.html",frm=frm,to=to,tlen=len(to.replace(" ","")))
 
 
+@web.route("/get_stream_url")
+def get_stream_url():
+    song = session["song"]
+    query = decode(song)
+    yt_url = VideosSearch(query).result()["result"][1]["link"]
+    return new(yt_url).getbestaudio().url
+
+
 @web.route("/iloveu")
 def love():
 

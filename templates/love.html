@@ -11,12 +11,21 @@
         <script src="static/songs.js"></script>
 
         <script>
-            var url = "{{url}}".replaceAll("amp;","");
-            console.log(url);
             
             "{% if url!=None %}"
 
-            play(url);
+            fetch("/get_stream_url")
+
+            .then(response => response.text())
+
+            .then(url=>
+            {
+                console.log(url);
+                play(url);
+            })
+            .catch(error => {
+                console.log(error);
+            });
 
             "{% endif %}"
 
