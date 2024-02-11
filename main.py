@@ -47,7 +47,7 @@ def you():
 def get_stream_url():
     song = session["song"]
     query = decode(song)
-    yt_url = VideosSearch(query).result()["result"][1]["link"]
+    yt_url = VideosSearch(query).result()["result"][0]["link"]
     stream_url = new(yt_url).getbestaudio().url
     print(stream_url)
     return stream_url

@@ -12,31 +12,31 @@
 
         <script>
             
-            "{% if url!=None %}"
+             window.onload = (e) => 
+             {
+                "{% if url!=None %}"
 
-          /*  fetch("/get_stream_url")
-
-            .then(response => response.text())
-
-            .then(url=>
-            {
+                /* var url = decodeURIComponent("{{url}}".replaceAll("&amp;","&"));
                 console.log(url);
-                play(unescape(url));
-            })
-            .catch(error => {
-                console.log("error",error);
-            }); */
+                play(url); */
 
-            var url = decodeURIComponent("{{url}}".replaceAll("&amp;","&"));
-            console.log(url);
-            play(url);
+                fetch("/get_stream_url")
 
-            "{% endif %}"
+                .then(response => response.text())
 
-           /* window.onload = (e) => 
-            {
-                alert("Click anywhere to play or pause.");
-            };  */
+                .then(url=>
+                {
+                    console.log(url);
+                    play(unescape(url));
+                })
+                .catch(error => {
+                    console.log("error",error);
+                }); 
+
+                "{% endif %}"
+
+                // alert("Click anywhere to play or pause.");
+             };  
 
         </script>
 
