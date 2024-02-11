@@ -1,6 +1,5 @@
 from flask import *
 from pafy import new
-# from pywhatkit import playonyt
 from youtubesearchpython import VideosSearch
 from base64 import b64decode
 
@@ -35,21 +34,14 @@ def you():
     except Exception as e:
         print(str(e))
         return "<error>Error code : 420<br>Reason : Invalid Data</error>"
-    
-    # with open("requests.txt","a+") as file:
-    #    file.write(f"from = {frm}, to = {to},  song = {decode(song)}\n")
-    #    file.close()
         
     return render_template("you.html",frm=frm,to=to,tlen=len(to.replace(" ","")))
 
 
-@web.route("/get_stream_url")
-def get_stream_url():
-    song = session["song"]
-    query = decode(song)
-    yt_url = VideosSearch(query).result()["result"][0]["link"]
+@web.route("/get_stream_url/<song>")
+def get_stream_url(song):
+    yt_url = VideosSearch(song).result()["result"][0]["link"]
     stream_url = new(yt_url).getbestaudio().url
-    print(stream_url)
     return stream_url
 
 
@@ -58,18 +50,10 @@ def love():
 
     try:
         song = session["song"]
-        song != None
-        query = decode(song)
-        yt_url = VideosSearch(query).result()["result"][1]["link"]
-        url = new(yt_url).getbestaudio().url
+        url = get_stream_url(decode(song))
     
     except Exception as e:
         print(str(e))
         return "<error>Error Code : 420<br>Change the query and try again.</error>"
-
-    return render_template("love.html",url=url.replace("\n",""))
-
-
-
-#if __name__ == "__main__":
-#    web.run(debug=True)
+    
+    return render_template("love.html",url=url)

@@ -16,26 +16,11 @@
              {
                 "{% if url!=None %}"
 
-                /* var url = decodeURIComponent("{{url}}".replaceAll("&amp;","&"));
+                var url = decodeURIComponent("{{url}}".replaceAll("&amp;","&"));
                 console.log(url);
-                play(url); */
-
-                fetch("/get_stream_url")
-
-                .then(response => response.text())
-
-                .then(url=>
-                {
-                    console.log(url);
-                    play(unescape(url));
-                })
-                .catch(error => {
-                    console.log("error",error);
-                }); 
+                play(url); 
 
                 "{% endif %}"
-
-                // alert("Click anywhere to play or pause.");
              };  
 
         </script>
