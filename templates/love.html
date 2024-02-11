@@ -14,7 +14,7 @@
             
             "{% if url!=None %}"
 
-            fetch("/get_stream_url")
+          /*  fetch("/get_stream_url")
 
             .then(response => response.text())
 
@@ -24,8 +24,10 @@
                 play(unescape(url));
             })
             .catch(error => {
-                console.log(error);
-            });
+                console.log("error",error);
+            }); */
+
+            play("{{url | safe}}");
 
             "{% endif %}"
 
