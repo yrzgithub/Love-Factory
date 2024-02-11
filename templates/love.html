@@ -21,7 +21,7 @@
             .then(url=>
             {
                 console.log(url);
-                play(url);
+                play(unescape(url));
             })
             .catch(error => {
                 console.log(error);
