@@ -16,9 +16,20 @@
              {
                 "{% if url!=None %}"
 
-                var url = decodeURIComponent("{{url}}".replaceAll("&amp;","&"));
-                console.log(url);
-                play(url); 
+                // var url = decodeURIComponent("{{url}}".replaceAll("&amp;","&"));
+                // console.log(url);
+                // play(url); 
+
+                fetch("/get_stream")
+                .then((response)=>response.getext())
+                .then((url) =>{
+                
+                    window.onload = (e) => {
+                        play(url);
+                    }
+                    
+                })
+                .catch((error)=>console.log(error));
 
                 "{% endif %}"
              };  

@@ -45,6 +45,11 @@ def get_stream_url(song):
     return stream_url
 
 
+@web.route("/get_stream")
+def getStream():
+    return get_stream_url(decode(session["song"]))
+
+
 @web.route("/iloveu")
 def love():
 
