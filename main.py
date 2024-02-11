@@ -40,7 +40,7 @@ def you():
 
 @web.route("/get_stream_url/<song>")
 def get_stream_url(song):
-    yt_url = VideosSearch(song).result()["result"][0]["link"]
+    yt_url = VideosSearch(song).result()["result"][1]["link"]
     stream_url = new(yt_url).getbestaudio().url
     return stream_url
 
