@@ -3,6 +3,8 @@ function play(source)
     console.log("this the source",source);
     var audio = setListener(source,window);
     audio.play();
+
+    return audio;
 }
 
 function setListener(source,element)
@@ -27,7 +29,7 @@ function setListener(source,element)
         }
         else 
         {
-            console.log("playing");
+            console.log("paused");
             audio.pause();
         }
     }

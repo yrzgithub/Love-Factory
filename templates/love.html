@@ -12,7 +12,7 @@
         <script src="static/songs.js"></script>
 
         <script>
-            
+
              window.onload = (e) => 
              {
                 "{% if url!=None %}"
@@ -21,12 +21,15 @@
                 // console.log(url);
                 // play(url); 
 
+                var spinner = document.getElementById("spinner");
+
                 fetch("/get_stream")
                 .then((response)=>response.text())
                 .then((url) =>{
                 
-                    play(url);
-                    
+                    play(url).onloadeddata = () => {
+                        spinner.hidden = true;
+                    };
                 })
                 .catch((error)=>console.log(error));
 
@@ -130,13 +133,13 @@
 
         </style>
 
-        <div class="center">
+        <div id="spinner" class="center">
 
             <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
 
         </div>
 
-        <div class="img_container">
+        <div id="images_group" class="img_container">
 
             <img width="100%" src="/static/eyes.jpg">
             <img width="100%" src="/static/deities.jpg">
