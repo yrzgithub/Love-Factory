@@ -44,11 +44,22 @@
                 margin-right: 10dp;
             }
 
+            body {
+                background-color: aqua;
+            }
+
             .center {
                 position: fixed;
-                top: 40%;
-                left: 45%;
-                }   
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }   
+
+            .spin {
+                width: 3rem;
+                height: 3rem;
+                color: white;
+            }
 
         </style>
 
@@ -56,9 +67,16 @@
 
             <div class="d-flex justify-content-center">
 
-                <div class="spinner-border" style="color: white;width: 10rem;height: 10rem;" role="status"></div>
+                <div class="spinner-border spin" role="status">
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="img_container">
+
             
-              </div>
 
         </div>
 
