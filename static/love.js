@@ -29,7 +29,7 @@ function redirect(button)
 
             var promise = new Promise((resolve,reject) => {
 
-                audio.oncanplay = (event) => {
+                audio.onloadeddata = (event) => {
                     resolve("Done");
                 };
 

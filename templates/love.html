@@ -27,7 +27,7 @@
                 .then((response)=>response.text())
                 .then((url) =>{
                 
-                    play(url).onloadeddata = () => {
+                    play(url).oncanplay = () => {
                         spinner.hidden = true;
                     };
                 })
