@@ -47,7 +47,7 @@ def get_stream_url(song:str):
         yt_url = song
     
     else:
-        yt_url = VideosSearch(song).result()["result"][1]["link"]
+        yt_url = VideosSearch(song).result()["result"][0]["link"]
 
     print(yt_url)
 

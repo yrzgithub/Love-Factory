@@ -1,7 +1,7 @@
 function play(source)
 {
     var audio = setListener(source,window);
-    audio.play();
+    audio.play().catch((error)=>console.log(error));
 
     return audio;
 }
