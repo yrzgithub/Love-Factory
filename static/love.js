@@ -52,7 +52,7 @@ function redirect(button)
                 .writeText(link)
                 .then(() => 
                     {
-                        alert("Link Copied to Clipboard");
+                        alert("Link Copied to Clipboard.\nShare it to them.");
                     }
                 )
                 .catch((error) => 
