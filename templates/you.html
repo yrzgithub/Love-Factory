@@ -16,8 +16,6 @@
             const name = "{{frm}}";
             const to = "{{to}}";
 
-            console.log(name);
-
             function showU(element)
             {
                 element.onclick = null;
@@ -27,13 +25,13 @@
 
             function show(id)
             {
-                document.getElementById(id).setAttribute("style","display:block;")
+                document.getElementById(id).style.display = "block";
             }
 
             function hide(element,id)
             {
                 element.disabled = true;
-                document.getElementById(id).setAttribute("style","color:darkgrey");
+                document.getElementById(id).style.color = "darkgrey";
             }
 
             function iloveu(element)
@@ -189,12 +187,9 @@
                             }
                             
                             missing = missing.split("").sort().join("").toUpperCase();
-
-                            console.log(alphabets,missing);
                         }
 
                         var question = alphabets + "<br>Where is " + missing + "?";
-                        console.log("question",question);
 
                         document.getElementById("lettersq").innerHTML = question;
 

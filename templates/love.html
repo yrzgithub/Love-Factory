@@ -22,15 +22,17 @@
                 // console.log(url);
                 // play(url); 
 
-                var spinner = document.getElementById("spinner");
+                var imgs = document.getElementById("images_group");
 
                 fetch("/get_stream")
                 .then((response)=>response.text())
                 .then((url) =>{
                 
                     play(url).oncanplay = () => {
-                        spinner.hidden = true;
+                        console.log("Playing...");
+                        imgs.classList.remove("placeholder","col-12");
                     };
+                    
                 })
                 .catch((error)=>console.log(error));
 

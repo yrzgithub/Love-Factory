@@ -83,8 +83,9 @@ button {
     }
 
     button {
-        padding: 1%;
-        width: 85%;
+        padding: 1.8%;
+        width: 100%;
+        margin-top: 1%;
     }
 
     input {
@@ -106,8 +107,8 @@ button {
     form {
         padding-left : 8%;
         padding-right: 8%;
-        padding-top: 10%;
-        padding-bottom: 10%;
+        padding-top: 12%;
+        padding-bottom: 12%;
         margin-right: 5%;
         margin-left: 4%;
     }
@@ -129,6 +130,7 @@ button {
     button {
         padding: 3%;
         width: 100%;
+        margin-top: 2%;
     }
     
 }

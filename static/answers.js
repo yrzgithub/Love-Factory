@@ -1,23 +1,19 @@
 const name = "{{frm}}";
 const to = "{{to}}"
 
-console.log(name);
-
 function showanswer(para)
 {
-    para.setAttribute("style","display:block;")
+    para.style.display = "block";
 }
 
 function hide(id)
 {
-    document.getElementById(id).setAttribute("style","color:darkgrey");
+    document.getElementById(id).style.color = "darkgrey";
 }
 
 function happy(element,ans)
 {
     var para = document.getElementById("happyExp");
-
-    console.log(ans,name.length);
 
     if(ans == to.length)
     {
@@ -88,7 +84,6 @@ function camera(element,ans)
 {
     var para = document.getElementById("camera");
     showanswer(para);
-    console.log("Clicked");
 }
 
 function letters(element,ans)

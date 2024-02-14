@@ -1,6 +1,5 @@
 function play(source)
 {
-    console.log("this the source",source);
     var audio = setListener(source,window);
     audio.play();
 
@@ -9,14 +8,9 @@ function play(source)
 
 function setListener(source,element)
 {
-
-    console.log("source",source);
-
     var audio = new Audio(source);
     audio.loop = false;
     audio.paused = true;
-
-    console.log(source);
 
     if(element.onclick!=null) return audio;
 

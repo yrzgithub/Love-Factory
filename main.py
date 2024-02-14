@@ -39,15 +39,25 @@ def you():
 
 
 @web.route("/get_stream_url/<song>")
-def get_stream_url(song):
-    yt_url = VideosSearch(song).result()["result"][1]["link"]
+def get_stream_url(song:str):
+
+    song = decode(song)
+
+    if song.startswith("http"):
+        yt_url = song
+    
+    else:
+        yt_url = VideosSearch(song).result()["result"][1]["link"]
+
+    print(yt_url)
+
     stream_url = new(yt_url).getbestaudio().url
     return stream_url
 
 
 @web.route("/get_stream")
 def getStream():
-    return get_stream_url(decode(session["song"]))
+    return get_stream_url(session["song"])
 
 
 @web.route("/iloveu")
@@ -55,7 +65,7 @@ def love():
 
     try:
         song = session["song"]
-        url = get_stream_url(decode(song))
+        url = get_stream_url(song)
     
     except Exception as e:
         print(str(e))
